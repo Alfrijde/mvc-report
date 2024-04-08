@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+body {
+    background: url('../images/masaaki-komori-Z8TQv3yKQd4-unsplash.jpg'); 
+    background-size: cover;
+
+}
+.main {
+    margin: 0 auto;
+    max-width: 800px;
+    min-height: 100vh;
+
+}
+
+.two-col-layout{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width:900px;
+    margin: 0 auto;
+    
+}
+
+.two-col-layout > .main {
+     width: calc(100% / 16 * 12); /* 12/16 width */
+}
+
+.two-col-layout > .aside {
+    padding-top: 20px;
+    width: calc(100% / 16 * 4); /* 4/16 width */
+}
+
+.site-header {
+    background-color: #F2B705;
+    height: 150px;
+}
+.site-title {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5em;
+    color: #A64F03;
+    padding: 0.5em;
+}
+
+.navbar {
+    text-align: center;
+    background: #F29F05;
+    color: black;
+    font-size: large;
+}
+.navbar li {
+    display: inline-block;
+    padding: 0.2em 0.5em;
+    text-decoration: none;
+}
+
+.navbar{
+    text-decoration: none;
+    font-family: "Pacifico", cursive;
+    font-size: 1em;
+    font-weight: 200;
+}
+
+.footer {
+    background: #F29F05;
+    color: black;
+    font-size: large;
+    height: 100px;
+    position: relative;
+    bottom: 0;
+}
+
+.footer li {
+    display: inline-block;
+    padding: 0.5em;
+    text-decoration: none;
+
+}
+
+h1 {
+    font-family: "Pacifico", cursive;
+    font-size: 2em;
+}
+
+h2 {
+    font-family: "Pacifico", cursive;
+    font-size: 1.5em;
+}
+
