@@ -87,3 +87,39 @@ h2 {
     font-size: 1.5em;
 }
 
+.die {
+    font-size: 2em;
+}
+
+.card {
+    font-size: 4em;
+
+}
+
+.card_list {
+    list-style-type: none;
+    font-size: 5em;
+
+}
+
+.flash-notice {
+    padding: 0.5em;
+    color: #004085;
+    background-color: #cce5ff;
+    border-color: #b8daff;
+}
+
+.flash-notice:before {
+    content: "ⓘ";
+}
+
+.flash-warning {
+    padding: 0.5em;
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+.flash-warning:before {
+    content: "⚠";
+}

@@ -59,7 +59,7 @@ class Report extends AbstractController
         ];
         $num = random_int(0, 2);
         $date = date("Y-m-d H:i:s");
-        
+
 
         $data = [
             'quote' => $qoutes[$num],
@@ -68,7 +68,7 @@ class Report extends AbstractController
 
         // return new JsonResponse($data);
 
-        
+
         $response = new JsonResponse($data);
         $response->setEncodingOptions(
             $response->getEncodingOptions() | JSON_PRETTY_PRINT

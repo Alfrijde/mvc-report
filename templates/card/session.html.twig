@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Session innehåll{% endblock %}
+
+{% block body %}
+<div class="main">
+    <h1>Session</h1>
+    {{ include('card/flash.html.twig') }}
+    <p>Just nu innehåller sessio9nen fäljande:</p>
+    <p>{{ session }}</p>
+
+</div>
+{% endblock %}

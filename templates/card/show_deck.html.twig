@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Kortlek{% endblock %}
+
+{% block body %}
+<h1>Hela kortleken</h1>
+
+<p>Här är kortleken:</p>
+
+<ul class="card_list">
+    {% for card in deck %}
+        <li>{{ card }}</li>
+    {% endfor %}
+    </ul>
+{% endblock %}
