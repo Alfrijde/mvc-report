@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use App\Card\Card;
 use App\Card\CardGraphic;
+use App\Card\DeckOfCards;
 
 class CardGameController extends AbstractController
 {
@@ -47,17 +48,11 @@ class CardGameController extends AbstractController
     #[Route("/card/deck", name: "card_deck")]
     public function show_deck(): Response
     {
-        $num = 52;
-
-        $deck = [];
-        for ($i = 1; $i <= $num; $i++) {
-            $card = new CardGraphic();
-            $card->setValue($i);
-            $deck[] = $card->getAsString();
-        }
+        $deck = new DeckOfCards();
+        
 
         $data = [
-            "deck" => $deck
+            "deck" => $deck->value
         ];
 
         return $this->render('card/show_deck.html.twig', $data);
@@ -68,28 +63,14 @@ class CardGameController extends AbstractController
         Request $request,
         SessionInterface $session
     ): Response {
-        $num = 52;
+        $deck = new DeckOfCards();
 
-        $rand_list = [];
-
-        while (count($rand_list) < 52) {
-            $value = rand(1, 52);
-            if (in_array($value, $rand_list) == false) {
-                $rand_list[] = $value;
-            }
-        }
-
-        $deck = [];
-        for ($i = 1; $i <= $num; $i++) {
-            $card = new CardGraphic();
-            $card->setValue($rand_list[$i - 1]);
-            $deck[] = $card->getAsString();
-        }
+        $deck->shuffledDeck();
 
         $session->set("card_deck", $deck);
 
         $data = [
-            "deck" => $deck
+            "deck" => $deck->value
         ];
 
         return $this->render('card/show_deck.html.twig', $data);
@@ -102,17 +83,16 @@ class CardGameController extends AbstractController
     ): Response {
         $deck = $session->get("card_deck");
 
-        if ($num > count($deck)) {
+        if ($num > count($deck->value)) {
             throw new \Exception("Can not draw more cards than are left!");
         }
 
-        $discard = [];
-        for ($i = 1; $i <= $num; $i++) {
-            $card = array_shift($deck);
-            $discard[] = $card;
-        }
+        $array = $deck->drawCards($num);
 
-        $cards_left = count($deck);
+        $deck = $array[0];
+        $discard = $array[1];
+
+        $cards_left = count($deck->value);
 
         $session->set("card_deck", $deck);
 
@@ -129,13 +109,12 @@ class CardGameController extends AbstractController
     {
         $deck = $session->get("card_deck");
 
-        $discard = [];
+        $array = $deck->drawCards();
 
-        $card = array_shift($deck);
-        $discard[] = $card;
+        $deck = $array[0];
+        $discard = $array[1];
 
-
-        $cards_left = count($deck);
+        $cards_left = count($deck->value);
 
         $session->set("card_deck", $deck);
 
