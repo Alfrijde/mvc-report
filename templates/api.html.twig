@@ -6,8 +6,37 @@
 <div class="main">
     <h1>JSON Router</h1>
     <ul>
-        <li><a href="{{ path('quotes') }}">Quotes</a></li>
+        <li><a href="{{ path('quotes') }}">Quotes</a></li> <p>Visar ett ordspråk och tidsstämpel</p>
     </ul>
+    <form method="post" action="">
+        <p>
+        
+        <input type="submit" name="deck" value="Sorterad kortlek"
+        onClick="this.form.action='{{ path('api_deck') }}';this.form.method='get';">
+        Visar en sorterad kortlek
+        </p>
+        <p>
+           
+        <input type="submit" name="shuffle" value="Blandad kortlek"
+        onClick="this.form.action='{{ path('api_shuffle') }}';this.form.method='post';">
+        Blandar kortleken och sparar till sessionen
+    </p>
+    <p>
+        
+        <input type="submit" name="drawOne" value="Dra ett kort"
+        onClick="this.form.action='{{ path('api_draw_one') }}';this.form.method='post';">
+        Drar det äversta kortet i kortleken
+    </p>
+    <p>
+        
+         <input type="submit" name="drawFive" value="Dra fem kort"
+        onClick="this.form.action='{{ path('api_draw', {num: 5}) }}';this.form.method='post';">
+        Drar de fem översta korten i kortleken
+    </p>
+        
+
+        </p>
+    </form>
 
 </div>
 {% endblock %}

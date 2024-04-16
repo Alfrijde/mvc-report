@@ -10,20 +10,19 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use App\Card\Card;
 use App\Card\CardGraphic;
+use App\Card\DeckOfCards;;
 
 class ApiCard extends AbstractController
 {
-    #[Route("/api/deck", name: "api_deck")]
-    public function apiDeck(): Response
+    #[Route("/api/deck", name: "api_deck", methods: ['GET'])]
+    public function apiDeck(
+        SessionInterface $session
+    ): Response
     {
-        $num = 52;
 
-        $deck = [];
-        for ($i = 1; $i <= $num; $i++) {
-            $card = new CardGraphic();
-            $card->setValue($i);
-            $deck[] = $card->getAsString();
-        }
+        $deck = new DeckOfCards();
+        
+        $session->set("card_deck", $deck);
 
         $data = [
             "deck" => $deck
@@ -37,28 +36,14 @@ class ApiCard extends AbstractController
         return $response;
     }
 
-    #[Route("/api/deck/shuffle", name: "api_shuffle")]
+    #[Route("/api/deck/shuffle", name: "api_shuffle", methods: ['POST'])]
     public function api_shuffle(
         Request $request,
         SessionInterface $session
     ): Response {
-        $num = 52;
+        $deck = $session->get("card_deck");
 
-        $rand_list = [];
-
-        while (count($rand_list) < 52) {
-            $value = rand(1, 52);
-            if (in_array($value, $rand_list) == false) {
-                $rand_list[] = $value;
-            }
-        }
-
-        $deck = [];
-        for ($i = 1; $i <= $num; $i++) {
-            $card = new CardGraphic();
-            $card->setValue($rand_list[$i - 1]);
-            $deck[] = $card->getAsString();
-        }
+        $deck->shuffledDeck();
 
         $session->set("card_deck", $deck);
 
@@ -73,24 +58,26 @@ class ApiCard extends AbstractController
         return $response;
     }
 
-    #[Route("/api/deck/draw/{num<\d+>}", name: "draw")]
+    #[Route("/api/deck/draw/{num<\d+>}", name: "api_draw", methods: ['POST'])]
     public function drawCard(
-        int $num,
+        int $num, 
         SessionInterface $session
     ): Response {
         $deck = $session->get("card_deck");
 
-        if ($num > count($deck)) {
+        
+
+        if ($num > count($deck->value)) {
             throw new \Exception("Can not draw more cards than are left!");
         }
 
         $discard = [];
         for ($i = 1; $i <= $num; $i++) {
-            $card = array_shift($deck);
+            $card = array_shift($deck->value);
             $discard[] = $card;
         }
 
-        $cards_left = count($deck);
+        $cards_left = count($deck->value);
 
         $session->set("card_deck", $deck);
 
@@ -108,18 +95,18 @@ class ApiCard extends AbstractController
         
     }
 
-    #[Route("/api/deck/draw", name: "draw_one")]
+    #[Route("/api/deck/draw", name: "api_draw_one")]
     public function drawOne(SessionInterface $session): Response
     {
         $deck = $session->get("card_deck");
 
         $discard = [];
 
-        $card = array_shift($deck);
+        $card = array_shift($deck->value);
         $discard[] = $card;
 
 
-        $cards_left = count($deck);
+        $cards_left = count($deck->value);
 
         $session->set("card_deck", $deck);
 

@@ -5,17 +5,13 @@
 {% block body %}
 <div class="main">
     <h1>Kortspel</h1>
+    <ul>
 
-    <form method="post" action="">
-        <p>
-            <input type="submit" name="Sorterad kortlek" value="deck"
-        onClick="this.form.action='{{ path('card_deck') }}';this.form.method='get';">
-        <input type="submit" name="Blandad kortlek" value="shuffle"
-        onClick="this.form.action='{{ path('deck_shuffle') }}';this.form.method='get';">
-        <input type="submit" name="Dra ett kort" value="drawOne"
-        onClick="this.form.action='{{ path('draw_one') }}';this.form.method='get';">
-        </p>
-    </form>
+    <li><a href="{{ path('card_deck') }}">Sorterad kortlek</a></li>
+    <li><a href="{{ path('deck_shuffle') }}">Blandad kortlek</a></li>
+    <li><a href="{{ path('draw_one') }}">Dra ett kort</a></li>
+
+    </ul>
 
 </div>
 {% endblock %}

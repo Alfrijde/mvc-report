@@ -15,41 +15,53 @@ class CardGameController extends AbstractController
 {
     #[Route("/session", name: "session", methods: ['GET'])]
     public function session(
+        Request $request,
         SessionInterface $session
     ): Response {
 
         $session = $request->getSession();
 
-        return $this->render('card/session.html.twig', $session);
+        $data = [
+            "session" => $session
+        ];
+
+        return $this->render('card/session.html.twig', $data);
     }
 
-    #[Route("/session/delete", name: "session_delete", methods: ['POST'])]
+    #[Route("/session/delete", name: "session_delete")]
     public function session_delete(
         SessionInterface $session
     ): Response {
-        $this->get('session')->clear();
+        $session->clear();
+
 
         $this->addFlash(
             'warning',
             'Nu är sessionen raderad'
         );
 
-        return $this->redirectToRoute('card/session');
+        return $this->redirectToRoute('session');
 
     }
 
 
     #[Route("/card", name: "card_init")]
-    public function init(): Response
+    public function init(
+        SessionInterface $session
+    ): Response
     {
+        
         return $this->render('card/card.html.twig');
     }
 
     #[Route("/card/deck", name: "card_deck")]
-    public function show_deck(): Response
+    public function show_deck(
+        SessionInterface $session
+    ): Response
     {
         $deck = new DeckOfCards();
         
+        $session->set("card_deck", $deck);
 
         $data = [
             "deck" => $deck->value
