@@ -4,7 +4,7 @@ namespace App\Card;
 
 use App\Card\CardGraphic;
 
-class DeckOfCards 
+class DeckOfCards
 {
     public function __construct()
     {
@@ -46,7 +46,7 @@ class DeckOfCards
         return $this->value;
     }
 
-    public function drawCards($num = 1) : array
+    public function drawCards($num = 1): array
     {
         $deck = $this->value;
         $discard = [];
@@ -61,9 +61,5 @@ class DeckOfCards
 
     }
 
-    public function deckToArray() : array
-    {
-
-    }
 
 }

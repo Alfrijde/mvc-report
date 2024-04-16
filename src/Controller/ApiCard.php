@@ -10,18 +10,19 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use App\Card\Card;
 use App\Card\CardGraphic;
-use App\Card\DeckOfCards;;
+use App\Card\DeckOfCards;
+
+;
 
 class ApiCard extends AbstractController
 {
     #[Route("/api/deck", name: "api_deck", methods: ['GET'])]
     public function apiDeck(
         SessionInterface $session
-    ): Response
-    {
+    ): Response {
 
         $deck = new DeckOfCards();
-        
+
         $session->set("card_deck", $deck);
 
         $data = [
@@ -60,12 +61,12 @@ class ApiCard extends AbstractController
 
     #[Route("/api/deck/draw/{num<\d+>}", name: "api_draw", methods: ['POST'])]
     public function drawCard(
-        int $num, 
+        int $num,
         SessionInterface $session
     ): Response {
         $deck = $session->get("card_deck");
 
-        
+
 
         if ($num > count($deck->value)) {
             throw new \Exception("Can not draw more cards than are left!");
@@ -92,7 +93,7 @@ class ApiCard extends AbstractController
         );
         return $response;
 
-        
+
     }
 
     #[Route("/api/deck/draw", name: "api_draw_one")]
@@ -121,7 +122,7 @@ class ApiCard extends AbstractController
         );
         return $response;
 
-    
+
     }
 
 }
