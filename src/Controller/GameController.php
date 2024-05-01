@@ -28,12 +28,12 @@ class GameController extends AbstractController
         $deck = new DeckOfCards();
         $deck->shuffledDeck();
 
-        $player_hand = new CardHand();
-        $bank_hand = new CardHand();
+        $playerHand = new CardHand();
+        $bankHand = new CardHand();
 
         $session->set("card_deck", $deck);
-        $session->set("player_hand", $player_hand);
-        $session->set("bank_hand", $bank_hand);
+        $session->set("player_hand", $playerHand);
+        $session->set("bank_hand", $bankHand);
 
 
         return $this->render('game/init.html.twig');
@@ -44,19 +44,19 @@ class GameController extends AbstractController
         SessionInterface $session
     ): Response {
         $deck = $session->get("card_deck");
-        $player_hand = $session->get("player_hand");
+        $playerHand = $session->get("player_hand");
 
-        $player_sum = $player_hand->countHand();
+        $playerSum = $playerHand->countHand();
 
-        $player_string = $player_hand->getHandAsString();
+        $playerString = $playerHand->getHandAsString();
 
         $session->set("card_deck", $deck);
-        $session->set("player_hand", $player_hand);
+        $session->set("player_hand", $playerHand);
 
 
         $data = [
-            "player_hand" => $player_string,
-            "player_sum" => $player_sum
+            "player_hand" => $playerString,
+            "player_sum" => $playerSum
         ];
 
         return $this->render('game/play.html.twig', $data);
@@ -67,26 +67,26 @@ class GameController extends AbstractController
         SessionInterface $session
     ): Response {
         $deck = $session->get("card_deck");
-        $player_hand = $session->get("player_hand");
+        $playerHand = $session->get("player_hand");
 
         $array = $deck->drawCards();
 
         $deck = $array[0];
-        $player_card = $array[1];
+        $playerCard = $array[1];
 
-        $player_hand->addToHand($player_card[0]);
+        $playerHand->addToHand($playerCard[0]);
 
-        $player_sum = $player_hand->countHand();
+        $playerSum = $playerHand->countHand();
 
-        $player_string = $player_hand->getHandAsString();
+        $playerString = $playerHand->getHandAsString();
 
         $session->set("card_deck", $deck);
-        $session->set("player_hand", $player_hand);
+        $session->set("player_hand", $playerHand);
 
 
         $data = [
-            "player_hand" => $player_string,
-            "player_sum" => $player_sum
+            "player_hand" => $playerString,
+            "player_sum" => $playerSum
         ];
 
         return $this->render('game/play.html.twig', $data);
@@ -97,24 +97,24 @@ class GameController extends AbstractController
         SessionInterface $session
     ): Response {
         $deck = $session->get("card_deck");
-        $bank_hand = $session->get("bank_hand");
+        $bankHand = $session->get("bank_hand");
 
-        $bank_sum = $bank_hand->countHand();
+        $bankSum = $bankHand->countHand();
 
-        while ($bank_sum < 17) {
+        while ($bankSum < 17) {
             $array = $deck->drawCards();
 
             $deck = $array[0];
-            $bank_card = $array[1];
+            $bankCard = $array[1];
 
-            $bank_hand->addToHand($bank_card[0]);
+            $bankHand->addToHand($bankCard[0]);
 
-            $bank_sum = $bank_hand->countHand();
+            $bankSum = $bankHand->countHand();
 
         }
 
         $session->set("card_deck", $deck);
-        $session->set("bank_hand", $bank_hand);
+        $session->set("bank_hand", $bankHand);
 
 
         return $this->redirectToRoute('game_end');
@@ -124,20 +124,20 @@ class GameController extends AbstractController
     public function end(
         SessionInterface $session
     ): Response {
-        $player_hand = $session->get("player_hand");
-        $bank_hand = $session->get("bank_hand");
+        $playerHand = $session->get("player_hand");
+        $bankHand = $session->get("bank_hand");
 
-        $bank_sum = $bank_hand->countHand();
-        $player_sum = $player_hand->countHand();
+        $bankSum = $bankHand->countHand();
+        $playerSum = $playerHand->countHand();
 
-        $player_string = $player_hand->getHandAsString();
-        $bank_string = $bank_hand->getHandAsString();
+        $playerString = $playerHand->getHandAsString();
+        $bankString = $bankHand->getHandAsString();
 
         $data = [
-            "player_hand" => $player_string,
-            "player_sum" => $player_sum,
-            "bank_hand" => $bank_string,
-            "bank_sum" => $bank_sum
+            "player_hand" => $playerString,
+            "player_sum" => $playerSum,
+            "bank_hand" => $bankString,
+            "bank_sum" => $bankSum
         ];
 
         return $this->render('game/end.html.twig', $data);

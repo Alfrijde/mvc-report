@@ -38,8 +38,7 @@ class ApiCard extends AbstractController
     }
 
     #[Route("/api/deck/shuffle", name: "api_shuffle", methods: ['POST'])]
-    public function api_shuffle(
-        Request $request,
+    public function apiShuffle(
         SessionInterface $session
     ): Response {
         $deck = $session->get("card_deck");
@@ -66,8 +65,6 @@ class ApiCard extends AbstractController
     ): Response {
         $deck = $session->get("card_deck");
 
-
-
         if ($num > count($deck->value)) {
             throw new \Exception("Can not draw more cards than are left!");
         }
@@ -78,13 +75,13 @@ class ApiCard extends AbstractController
             $discard[] = $card;
         }
 
-        $cards_left = count($deck->value);
+        $cardsLeft = count($deck->value);
 
         $session->set("card_deck", $deck);
 
         $data = [
             "discard" => $discard,
-            "cards_left" => $cards_left,
+            "cards_left" => $cardsLeft,
         ];
 
         $response = new JsonResponse($data);
@@ -107,13 +104,13 @@ class ApiCard extends AbstractController
         $discard[] = $card;
 
 
-        $cards_left = count($deck->value);
+        $cardsLeft = count($deck->value);
 
         $session->set("card_deck", $deck);
 
         $data = [
             "discard" => $discard,
-            "cards_left" => $cards_left,
+            "cards_left" => $cardsLeft,
         ];
 
         $response = new JsonResponse($data);

@@ -47,7 +47,6 @@ class CardGameController extends AbstractController
 
     #[Route("/card", name: "card_init")]
     public function init(
-        SessionInterface $session
     ): Response {
 
         return $this->render('card/card.html.twig');
@@ -57,8 +56,8 @@ class CardGameController extends AbstractController
     public function show_deck(
         SessionInterface $session
     ): Response {
-        $deck_objects = new DeckOfCards();
-        $deck = $deck_objects->getDeckAsString();
+        $deckObjects = new DeckOfCards();
+        $deck = $deckObjects->getDeckAsString();
 
         $session->set("card_deck", $deck);
 
@@ -74,11 +73,11 @@ class CardGameController extends AbstractController
         Request $request,
         SessionInterface $session
     ): Response {
-        $deck_objects = new DeckOfCards();
+        $deckObjects = new DeckOfCards();
 
 
-        $deck_objects->shuffledDeck();
-        $deck = $deck_objects->getDeckAsString();
+        $deckObjects->shuffledDeck();
+        $deck = $deckObjects->getDeckAsString();
 
         $session->set("card_deck", $deck);
 
@@ -105,13 +104,13 @@ class CardGameController extends AbstractController
         $deck = $array[0];
         $discard = $array[1];
 
-        $cards_left = count($deck->value);
+        $cardsLeft = count($deck->value);
 
         $session->set("card_deck", $deck);
 
         $data = [
             "discard" => $discard,
-            "cards_left" => $cards_left,
+            "cards_left" => $cardsLeft,
         ];
 
         return $this->render('card/discard.html.twig', $data);
@@ -127,13 +126,13 @@ class CardGameController extends AbstractController
         $deck = $array[0];
         $discard = $array[1];
 
-        $cards_left = count($deck->value);
+        $cardsLeft = count($deck->value);
 
         $session->set("card_deck", $deck);
 
         $data = [
             "discard" => $discard,
-            "cards_left" => $cards_left,
+            "cards_left" => $cardsLeft,
         ];
 
         return $this->render('card/discard.html.twig', $data);

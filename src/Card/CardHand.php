@@ -7,42 +7,50 @@ use App\Card\DeckOfCards;
 
 class CardHand
 {
+    /**
+ * @property array<mixed> $value
+ */
+    // @phpstan-ignore-next-line
+    protected array $value;
+
     public function __construct()
     {
         $hand = [];
 
-        $this-> value = $hand;
+        $this->value = $hand;
     }
 
-    public function addToHand($card)
+    public function addToHand(CardGraphic $card): void
     {
         $hand = $this->value;
         array_push($hand, $card);
         $this-> value = $hand;
     }
+    /**
+     * @return array<string>
+     */
 
     public function getHandAsString(): array
     {
         $hand = $this->value;
-        $string_deck = [];
+        $stringDeck = [];
 
         for ($i = 0; $i < count($hand); $i++) {
             $card = $hand[$i];
-            $card_string = $card->getAsString();
-            $string_deck[] = $card_string;
+            $cardString = $card->getAsString();
+            $stringDeck[] = $cardString;
         }
 
-        return $string_deck;
-
+        return $stringDeck;
     }
 
-    public function countHand()
+    public function countHand(): int
     {
         $hand = $this->value;
-        $hand_string = $this->getHandAsString();
+        $handString = $this->getHandAsString();
         $aces = array('🂡', '🂱', '🃁', '🃑');
         $total = 0;
-        $if_aces = array_intersect($hand_string, $aces);
+        $ifAces = array_intersect($handString, $aces);
 
         for($i = 0; $i < count($hand); ++$i) {
             $value = $hand[$i]->getValue();
@@ -50,8 +58,8 @@ class CardHand
 
         }
 
-        if ($if_aces) {
-            if (count($if_aces) === 1) {
+        if ($ifAces) {
+            if (count($ifAces) === 1) {
                 $total2 = $total + 13;
 
                 if ($total2 <= 21) {
@@ -61,7 +69,7 @@ class CardHand
                 return $total;
             }
 
-            if (count($if_aces) === 2) {
+            if (count($ifAces) === 2) {
                 $total1 = $total + 13;
                 $total2 = $total + 13 + 13;
 
@@ -74,7 +82,7 @@ class CardHand
                 return $total;
             }
 
-            if (count($if_aces) === 3) {
+            if (count($ifAces) === 3) {
                 $total1 = $total + 13;
                 $total2 = $total + 13 + 13;
                 $total3 = $total + 13 + 13 + 13;
@@ -89,7 +97,7 @@ class CardHand
 
                 return $total;
             }
-            if (count($if_aces) === 4) {
+            if (count($ifAces) === 4) {
                 $total1 = $total + 13;
                 $total2 = $total + 13 + 13;
                 $total3 = $total + 13 + 13 + 13;

@@ -4,7 +4,7 @@ namespace App\Card;
 
 class Card
 {
-    protected $value;
+    protected int $value;
 
     public function __construct()
     {
@@ -13,7 +13,7 @@ class Card
         $this->value = $value;
     }
 
-    public function setValue($value): int
+    public function setValue(int $value): int
     {
         return $this->value = $value;
     }

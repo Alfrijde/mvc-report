@@ -6,6 +6,8 @@ use App\Card\CardGraphic;
 
 class DeckOfCards
 {
+    protected array $value;
+
     public function __construct()
     {
         $num = 52;
@@ -20,24 +22,27 @@ class DeckOfCards
         $this->value = $deck;
 
     }
+    /**
+     * @return array<object>
+     */
 
     public function shuffledDeck(): array
     {
         $num = 52;
 
-        $rand_list = [];
+        $randList = [];
 
-        while (count($rand_list) < 52) {
+        while (count($randList) < 52) {
             $value = rand(1, 52);
-            if (in_array($value, $rand_list) == false) {
-                $rand_list[] = $value;
+            if (in_array($value, $randList) == false) {
+                $randList[] = $value;
             }
         }
 
         $deck = [];
         for ($i = 1; $i <= $num; $i++) {
             $card = new CardGraphic();
-            $card->setValue($rand_list[$i - 1]);
+            $card->setValue($randList[$i - 1]);
             $deck[] = $card;
         }
 
@@ -45,8 +50,11 @@ class DeckOfCards
 
         return $this->value;
     }
+    /**
+     * @return array<array<object>>
+     */
 
-    public function drawCards($num = 1): array
+    public function drawCards(int $num = 1): array
     {
         $deck = $this->value;
         $discard = [];
@@ -60,19 +68,22 @@ class DeckOfCards
         return [$this, $discard];
 
     }
+    /**
+     * @return array<string>
+     */
 
     public function getDeckAsString(): array
     {
         $deck = $this->value;
-        $string_deck = [];
+        $stringDeck = [];
 
         for ($i = 0; $i < count($deck); $i++) {
             $card = $deck[$i];
-            $card_string = $card->getAsString();
-            $string_deck[] = $card_string;
+            $cardString = $card->getAsString();
+            $stringDeck[] = $cardString;
         }
 
-        return $string_deck;
+        return $stringDeck;
 
     }
 
