@@ -1,0 +1,38 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Kortspelet slut{% endblock %}
+
+{% block body %}
+<h1>Summering</h1>
+
+<p>Din hand var värd {{player_sum }}</p>
+<p>Bankens hand var värd {{bank_sum }}</p>
+
+<ul class="card_list">
+    {% for card in player_hand %}
+        <li>{{ card }}</li>
+    {% endfor %}
+    </ul>
+
+    <p>Bankens hand var värd {{bank_sum }}</p>
+    <ul class="card_list">
+        {% for card in bank_hand %}
+            <li>{{ card }}</li>
+        {% endfor %}
+        </ul>
+    {% if player_sum <= bank_sum %}
+    <p>Du vann inte över banken. Prova igen!</p>
+
+    {% else %}
+    <p>Du vann spelet. Grattis!</p>
+        
+    {% endif %}
+
+
+
+    <a href="{{ path('game_init') }}">Spela igen</a>
+
+
+    
+
+{% endblock %}

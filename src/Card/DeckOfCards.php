@@ -14,7 +14,7 @@ class DeckOfCards
         for ($i = 1; $i <= $num; $i++) {
             $card = new CardGraphic();
             $card->setValue($i);
-            $deck[] = $card->getAsString();
+            $deck[] = $card;
         }
 
         $this->value = $deck;
@@ -38,7 +38,7 @@ class DeckOfCards
         for ($i = 1; $i <= $num; $i++) {
             $card = new CardGraphic();
             $card->setValue($rand_list[$i - 1]);
-            $deck[] = $card->getAsString();
+            $deck[] = $card;
         }
 
         $this->value = $deck;
@@ -58,6 +58,21 @@ class DeckOfCards
         $this->value = $deck;
 
         return [$this, $discard];
+
+    }
+
+    public function getDeckAsString(): array
+    {
+        $deck = $this->value;
+        $string_deck = [];
+
+        for ($i = 0; $i < count($deck); $i++) {
+            $card = $deck[$i];
+            $card_string = $card->getAsString();
+            $string_deck[] = $card_string;
+        }
+
+        return $string_deck;
 
     }
 

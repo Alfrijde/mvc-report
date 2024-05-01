@@ -1,0 +1,28 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Kortlek{% endblock %}
+
+{% block body %}
+<h1>Kortspel</h1>
+
+<p>Din hand är just nu värd {{player_sum }}</p>
+
+<ul class="card_list">
+    {% for card in player_hand %}
+        <li>{{ card }}</li>
+    {% endfor %}
+    </ul>
+    {% if player_sum <= 21 %}
+    <a href="{{ path('game_draw') }}">Dra ett nytt kort</a>
+    <a href="{{ path('game_bank') }}">Sluta  dra kort</a>
+    {% endif %}
+    {% if player_sum > 21 %}
+
+    <p>Du kommer över summan 21 och spelet är nu slut. Spela igen?</p>
+    <a href="{{ path('game_init') }}">Spela igen</a>
+
+    {% endif %}
+    
+
+{% endblock %}
+

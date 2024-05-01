@@ -1,0 +1,26 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Kortspel{% endblock %}
+
+{% block body %}
+<div class="main">
+    <h1>Välkommen till kortspelet 21</h1>
+
+    <h2>Så här går spelet till</h2>
+    <p>Ideen med spelet är att komma så nära summan 21 som möjligt utan att tippa över.
+    Du kommer att få dra kort från en kortlek och räkna summan varje gång. Ess är värda 1
+     eller 14, knektar 11, damer 12 och kungar 13.</p>
+     <p>Du kan stanna när du vill innan du kommit upp till 21. Om du får en högre summa vinner "banken".</p>
+     <p>Efter att du har stannat och inte kommit över 21 så är det bankens tur med samma regler. Om banken får
+    en högre eller samma summa som dig utan att spränga 21 så vinner banken.</p>
+
+    <a href="{{ path('game_play') }}">Starta spelet</a>
+
+
+    
+
+
+    
+
+</div>
+{% endblock %}

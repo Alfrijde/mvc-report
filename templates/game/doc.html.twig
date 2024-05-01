@@ -1,0 +1,31 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Dokumentation{% endblock %}
+
+{% block body %}
+<div class="main">
+    <h1>Dokumentation</h1>
+
+    <h2>Klasser</h2>
+    <h3>Card</h3>
+    <p>En klass innehållande ett kort. Identifieras med en siffra/en utf-8-ikon. Korten kan ges ett specifict värde eller en random.</p>
+    <h3>DeckOfCards</h3>
+    <p>En klass innehållande en array  med ett eller flera card-objekt. När DeckOf cards-objectet initierats
+         innehåller en 52 Card-object, men kan ändras. Kortleken kan vara sorterad eller blandas. Man kan dra
+          kort från kortleken och då tas de från toppen av arrayen.</p>
+    <h3>CardHand</h3>
+    <p>Innehåller en array med ett eller flera Card-objekt. CardHand kan räkna summan av korten på handen. </p>
+   
+    <h2>Här är flödesshemat över kortspelet 21:</h2>
+    <a href="{{ asset('img/Flödesschema-21.drawio.png') }}">
+        <img src="{{ asset('img/Flödesschema-21.drawio.png') }}" alt="" width="500">
+    </a>
+    <h2>Pseudokod för lösningen i spelet</h2>
+    <embed src="{{ asset('pdf/Kortspel 21 pseudokod lokal.pdf')}}" width="800" height="600" type='application/pdf'>
+    
+
+
+    
+
+</div>
+{% endblock %}

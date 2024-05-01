@@ -57,12 +57,13 @@ class CardGameController extends AbstractController
     public function show_deck(
         SessionInterface $session
     ): Response {
-        $deck = new DeckOfCards();
+        $deck_objects = new DeckOfCards();
+        $deck = $deck_objects->getDeckAsString();
 
         $session->set("card_deck", $deck);
 
         $data = [
-            "deck" => $deck->value
+            "deck" => $deck
         ];
 
         return $this->render('card/show_deck.html.twig', $data);
@@ -73,14 +74,16 @@ class CardGameController extends AbstractController
         Request $request,
         SessionInterface $session
     ): Response {
-        $deck = new DeckOfCards();
+        $deck_objects = new DeckOfCards();
 
-        $deck->shuffledDeck();
+
+        $deck_objects->shuffledDeck();
+        $deck = $deck_objects->getDeckAsString();
 
         $session->set("card_deck", $deck);
 
         $data = [
-            "deck" => $deck->value
+            "deck" => $deck
         ];
 
         return $this->render('card/show_deck.html.twig', $data);
