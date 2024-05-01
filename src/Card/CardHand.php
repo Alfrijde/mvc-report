@@ -34,8 +34,9 @@ class CardHand
     {
         $hand = $this->value;
         $stringDeck = [];
+        $count = count($hand);
 
-        for ($i = 0; $i < count($hand); $i++) {
+        for ($i = 0; $i < $count; $i++) {
             $card = $hand[$i];
             $cardString = $card->getAsString();
             $stringDeck[] = $cardString;
@@ -51,15 +52,17 @@ class CardHand
         $aces = array('🂡', '🂱', '🃁', '🃑');
         $total = 0;
         $ifAces = array_intersect($handString, $aces);
+        $count = count($hand);
 
-        for($i = 0; $i < count($hand); ++$i) {
+        for($i = 0; $i < $count; ++$i) {
             $value = $hand[$i]->getValue();
             $total = $total + $value;
 
         }
 
         if ($ifAces) {
-            if (count($ifAces) === 1) {
+            $acesCount = count($ifAces);
+            if ($acesCount === 1) {
                 $total2 = $total + 13;
 
                 if ($total2 <= 21) {
@@ -69,7 +72,7 @@ class CardHand
                 return $total;
             }
 
-            if (count($ifAces) === 2) {
+            if ($acesCount === 2) {
                 $total1 = $total + 13;
                 $total2 = $total + 13 + 13;
 
@@ -82,7 +85,7 @@ class CardHand
                 return $total;
             }
 
-            if (count($ifAces) === 3) {
+            if ($acesCount === 3) {
                 $total1 = $total + 13;
                 $total2 = $total + 13 + 13;
                 $total3 = $total + 13 + 13 + 13;
@@ -97,7 +100,7 @@ class CardHand
 
                 return $total;
             }
-            if (count($ifAces) === 4) {
+            if ($acesCount === 4) {
                 $total1 = $total + 13;
                 $total2 = $total + 13 + 13;
                 $total3 = $total + 13 + 13 + 13;

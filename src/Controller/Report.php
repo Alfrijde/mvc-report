@@ -10,7 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class Report extends AbstractController
 {
     #[Route("/", name: "me")]
-    public function me(): Response
+    public function showMe(): Response
     {
 
 

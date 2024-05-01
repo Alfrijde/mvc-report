@@ -29,7 +29,7 @@ class CardGameController extends AbstractController
     }
 
     #[Route("/session/delete", name: "session_delete")]
-    public function session_delete(
+    public function sessionDelete(
         SessionInterface $session
     ): Response {
         $session->clear();
@@ -53,7 +53,7 @@ class CardGameController extends AbstractController
     }
 
     #[Route("/card/deck", name: "card_deck")]
-    public function show_deck(
+    public function showDeck(
         SessionInterface $session
     ): Response {
         $deckObjects = new DeckOfCards();
@@ -69,8 +69,7 @@ class CardGameController extends AbstractController
     }
 
     #[Route("/card/deck/shuffle", name: "deck_shuffle")]
-    public function shuffle_deck(
-        Request $request,
+    public function shuffleDeck(
         SessionInterface $session
     ): Response {
         $deckObjects = new DeckOfCards();

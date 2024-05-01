@@ -31,8 +31,9 @@ class DeckOfCards
         $num = 52;
 
         $randList = [];
+        $count = count($randList);
 
-        while (count($randList) < 52) {
+        while ($count < 52) {
             $value = rand(1, 52);
             if (in_array($value, $randList) == false) {
                 $randList[] = $value;
