@@ -6,6 +6,11 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use App\Card\Card;
+use App\Card\CardGraphic;
+use App\Card\DeckOfCards;
+use App\Card\CardHand;
 
 class Report extends AbstractController
 {
@@ -74,6 +79,34 @@ class Report extends AbstractController
             $response->getEncodingOptions() | JSON_PRETTY_PRINT
         );
         return $response;
+    }
+
+    #[Route("/api/game", name: "api_game")]
+    public function jsonGame(SessionInterface $session): Response
+    {
+        $playerHand = $session->get("player_hand");
+        $bankHand = $session->get("bank_hand");
+
+        $bankSum = $bankHand->countHand();
+        $playerSum = $playerHand->countHand();
+
+        $playerString = $playerHand->getHandAsString();
+        $bankString = $bankHand->getHandAsString();
+
+        $data = [
+            "player_hand" => $playerString,
+            "player_sum" => $playerSum,
+            "bank_hand" => $bankString,
+            "bank_sum" => $bankSum
+        ];
+
+
+        $response = new JsonResponse($data);
+        $response->setEncodingOptions(
+            $response->getEncodingOptions() | JSON_PRETTY_PRINT
+        );
+        return $response;
+
     }
 
 

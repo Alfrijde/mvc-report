@@ -25,7 +25,7 @@
         
         <input type="submit" name="drawOne" value="Dra ett kort"
         onClick="this.form.action='{{ path('api_draw_one') }}';this.form.method='post';">
-        Drar det äversta kortet i kortleken
+        Drar det översta kortet i kortleken
     </p>
     <p>
         
@@ -37,6 +37,9 @@
 
         </p>
     </form>
+
+    <a href="{{ path('api_game') }}">Kortspel</a>
+    <p>Se den nuvarande ställningen i kortpelet 21</p>
 
 </div>
 {% endblock %}
