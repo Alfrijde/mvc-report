@@ -3,10 +3,10 @@
 {% block title %}Kortspelet slut{% endblock %}
 
 {% block body %}
+<div class="main">
 <h1>Summering</h1>
 
 <p>Din hand var värd {{player_sum }}</p>
-<p>Bankens hand var värd {{bank_sum }}</p>
 
 <ul class="card_list">
     {% for card in player_hand %}
@@ -20,7 +20,7 @@
             <li>{{ card }}</li>
         {% endfor %}
         </ul>
-    {% if player_sum <= bank_sum %}
+    {% if player_sum <= bank_sum and bank_sum <= 21 %}
     <p>Du vann inte över banken. Prova igen!</p>
 
     {% else %}
@@ -30,9 +30,9 @@
 
 
 
-    <a href="{{ path('game_init') }}">Spela igen</a>
+    <a class="button" href="{{ path('game_init') }}">Spela igen</a>
 
-
+</div>
     
 
 {% endblock %}

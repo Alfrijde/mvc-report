@@ -3,6 +3,7 @@
 {% block title %}Kortlek{% endblock %}
 
 {% block body %}
+<div class="main">
 <h1>Kortspel</h1>
 
 <p>Din hand är just nu värd {{player_sum }}</p>
@@ -13,16 +14,16 @@
     {% endfor %}
     </ul>
     {% if player_sum <= 21 %}
-    <a href="{{ path('game_draw') }}">Dra ett nytt kort</a>
-    <a href="{{ path('game_bank') }}">Sluta  dra kort</a>
+    <a class="button" href="{{ path('game_draw') }}">Dra ett nytt kort</a>
+    <a class="button" href="{{ path('game_bank') }}">Sluta  dra kort</a>
     {% endif %}
     {% if player_sum > 21 %}
 
     <p>Du kommer över summan 21 och spelet är nu slut. Spela igen?</p>
-    <a href="{{ path('game_init') }}">Spela igen</a>
+    <a class="button" href="{{ path('game_init') }}">Spela igen</a>
 
     {% endif %}
-    
+</div>   
 
 {% endblock %}
 

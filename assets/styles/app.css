@@ -98,8 +98,14 @@ h2 {
 
 .card_list {
     list-style-type: none;
-    font-size: 5em;
+    font-size: 6em;
+    margin: 25px;
 
+}
+
+.card_list li {
+    display: inline-block;
+    text-decoration: none;
 }
 
 .flash-notice {
@@ -122,4 +128,15 @@ h2 {
 
 .flash-warning:before {
     content: "⚠";
+}
+
+.button {
+    border: 2px solid #F29F05;
+    background: #F2B705;
+    margin: 25px;
+    padding: 0.8em;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: medium;
+    font-weight: 300;
 }
