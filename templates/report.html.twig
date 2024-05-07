@@ -86,7 +86,33 @@
     <p>Även att jobba med så hårda linters var nytt för mig. Jag kunde inte ta hand om allt. Vissa saker förstod jag inte hur jag skulle
          fixa och lintern blev inte nöjd med de lösningar jag kom på. Det är något jag får titta närmare på nästa vecka.</p>
     <h2 id="kmom04">Kmom04</h2>
-    <p>Kmom04</p>
+    <p>•	Berätta hur du upplevde att skriva kod som testar annan kod med PHPUnit och hur du upplever phpunit rent allmänt.</p>
+    <p>Jag tycker det var roligt att skriva testfall. De första blev kanske lite enkla och basic, men ju mer kod desto fler olika 
+    utfall behövdes testas. Det var bra och tydligt att kunna se vart i koden som testerna jag gjort applicerades och vart det saknades
+     tester. Väldigt skönt när allt blev grönt och gick som det skulle. <br>Jag tror att det är bra att testa sin kod på det här sättet,
+      jag tycker jag skrev bättre kod och kunde ta bort onödiga if-statser som var svåra och testa och ändå aldrig skulle inträffa.</p>
+    <p>•	Hur väl lyckades du med kodtäckningen av din kod, lyckades du nå mer än 90% kodtäckning?</p>
+    <p>På klasserna i Card och Dice fick jag 100% täckning, jag provade inte att ge mig på controllers den här gången. Jag gjorde många små
+     testfall för varje klass och tog dem uppifrån och ner. Blev det rätt objekt som skapades, fick det rätt värde osv. tills jag hade täckt
+      in allt. I några testfall bakade jag in två asserts för att vara lite effektiv- Jag använde mig av mockning som fungerade bra och jag
+       kunde kolla de utfall som jag behövde.</p>
+    <p>•	Upplever du din egen kod som “testbar kod” eller finns det delar i koden som är mer eller mindre testbar och finns det saker som 
+    kan göras för att förbättra kodens testbarhet?</p>
+    <p>Min kod är inte så avancerad och komplex så den var lätt att testa. En funktion i CardHand var väldigt stor och komplex med många 
+    if-statser som jag hade skrivit förra veckan. Den kunde jag nu ta ner till en mycket enklare nivå och lintern blev också nöjd med resultatet.
+     Nu körde jag väldigt ytligt testande och provade inga extremfall utan bara att koden fungerade som jag tänkt.</p>
+    <p>•	Valde du att skriva om delar av din kod för att förbättra den eller göra den mer testbar, om så berätta lite hur du tänkte.</p>
+    <p>Ja, jag valde att skriva om en funktion i CardHand som summerade korthanden. Jag hade lagt till många if-statser som gjorde koden mycket
+     komplex. Jag visste att den blev lite krånglig redan förra veckan men hann inte fixa till den då. Nu med phpunit kunde jag snabbt se när jag
+      började testa den vart jag kunde skära bort stora delar av koden och göra den mycket enklare och smidigare och den funktionen försvann från
+       lintern den här veckan.</p>
+       <p>•	Fundera över om du anser att testbar kod är något som kan identifiera “snygg och ren kod”.</p>
+    <p>Ja, jag tror att man ser sin kod lite med andra ögon när man testar den. Saker som kändes logiska när den skrevs känns kanske inte lika bra
+     i testfasen. Mycket kanske man kan skala bort för att det inte går att testa för att det heller aldrig kommer inträffa. Eller så måste man
+      tänka om helt i strukturen för att lätt kunna testa alla möjliga utfall i koden.</p>
+    <p>•	Vilken är din TIL för detta kmom?</p>
+    <p>Min TIL för den här veckan är att jobba lite mer med testning och testning i php och med php unit. Det blev väldigt tydligt när koden antingen 
+    var grön eller röd och vilka områden jag lyckats pricka in med mina tester. </p>
     <h2 id="kmom05">Kmom05</h2>
     <p>Kmom05</p>
     <h2 id="kmom06">Kmom06</h2>
