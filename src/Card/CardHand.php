@@ -61,64 +61,13 @@ class CardHand
         }
 
         if ($ifAces) {
-            $acesCount = count($ifAces);
-            if ($acesCount === 1) {
-                $total2 = $total + 13;
+            $total2 = $total + 13;
 
-                if ($total2 <= 21) {
-                    return $total2;
-                }
-
-                return $total;
+            if ($total2 <= 21) {
+                return $total2;
             }
 
-            if ($acesCount === 2) {
-                $total1 = $total + 13;
-                $total2 = $total + 13 + 13;
-
-                if ($total2 <= 21) {
-                    return $total2;
-                } elseif ($total1 <= 21) {
-                    return $total1;
-                }
-
-                return $total;
-            }
-
-            if ($acesCount === 3) {
-                $total1 = $total + 13;
-                $total2 = $total + 13 + 13;
-                $total3 = $total + 13 + 13 + 13;
-
-                if ($total3 <= 21) {
-                    return $total3;
-                } elseif ($total2 <= 21) {
-                    return $total2;
-                } elseif ($total1 <= 21) {
-                    return $total1;
-                }
-
-                return $total;
-            }
-            if ($acesCount === 4) {
-                $total1 = $total + 13;
-                $total2 = $total + 13 + 13;
-                $total3 = $total + 13 + 13 + 13;
-                $total4 = $total + 13 + 13 + 13 + 13;
-
-                if ($total4 <= 21) {
-                    return $total4;
-                } elseif ($total3 <= 21) {
-                    return $total3;
-                } elseif ($total2 <= 21) {
-                    return $total2;
-                } elseif ($total1 <= 21) {
-                    return $total1;
-                }
-
-                return $total;
-            }
-
+            return $total;
         }
 
         return $total;

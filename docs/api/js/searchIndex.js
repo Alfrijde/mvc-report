@@ -386,6 +386,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Dice-DiceHand.html#method_getValues"
         },                {
+            "fqsen": "\\App\\Dice\\DiceHand\u003A\u003Asum\u0028\u0029",
+            "name": "sum",
+            "summary": "",
+            "url": "classes/App-Dice-DiceHand.html#method_sum"
+        },                {
             "fqsen": "\\App\\Dice\\DiceHand\u003A\u003AgetString\u0028\u0029",
             "name": "getString",
             "summary": "",
