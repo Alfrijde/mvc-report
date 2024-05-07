@@ -1,4 +1,7 @@
 <?php
+/**
+ * The DeckOfCards-class, contains objects of the CardGraphic-class.
+ */
 
 namespace App\Card;
 
@@ -7,6 +10,9 @@ use App\Card\CardGraphic;
 class DeckOfCards
 {
     protected array $value;
+    /**
+     * Constructs the deck and creates a sorted deck containing CardGraphic-objects.
+     */
 
     public function __construct()
     {
@@ -23,6 +29,7 @@ class DeckOfCards
 
     }
     /**
+     * Creates a shuffled deck containing CardGraphic-objects.
      * @return array<object>
      */
 
@@ -52,6 +59,8 @@ class DeckOfCards
         return $this->value;
     }
     /**
+     * Draws cards from the top af the deck and returns the rest of the deck and the discarded cards as separate arrays in one array.
+     * The default number of cards is one card.
      * @return array<array<object>>
      */
 
@@ -70,6 +79,8 @@ class DeckOfCards
 
     }
     /**
+     * Returns all the cards in the deck as an array of strings. 
+     * As the class contains objects of the CardGraphic-class the string is an utf-8 icon.
      * @return array<string>
      */
 

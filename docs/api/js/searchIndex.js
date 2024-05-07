@@ -8,22 +8,22 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Card\\Card\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "",
+            "summary": "Creates\u0020a\u0020card\u0020with\u0020a\u0020random\u0020value\u0020between\u00201\u0020and\u002052.",
             "url": "classes/App-Card-Card.html#method___construct"
         },                {
             "fqsen": "\\App\\Card\\Card\u003A\u003AsetValue\u0028\u0029",
             "name": "setValue",
-            "summary": "",
+            "summary": "Sets\u0020the\u0020value\u0020of\u0020the\u0020card\u0020to\u0020the\u0020desired\u0020number.",
             "url": "classes/App-Card-Card.html#method_setValue"
         },                {
             "fqsen": "\\App\\Card\\Card\u003A\u003AgetValue\u0028\u0029",
             "name": "getValue",
-            "summary": "",
+            "summary": "Returns\u0020the\u0020value\u0020of\u0020the\u0020card.",
             "url": "classes/App-Card-Card.html#method_getValue"
         },                {
             "fqsen": "\\App\\Card\\Card\u003A\u003AgetAsString\u0028\u0029",
             "name": "getAsString",
-            "summary": "",
+            "summary": "Returns\u0020the\u0020value\u0020of\u0020the\u0020card\u0020as\u0020a\u0020string.",
             "url": "classes/App-Card-Card.html#method_getAsString"
         },                {
             "fqsen": "\\App\\Card\\Card\u003A\u003A\u0024value",
@@ -38,27 +38,27 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Card\\CardGraphic\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "",
+            "summary": "Constructs\u0020the\u0020object\u0020of\u0020the\u0020class.",
             "url": "classes/App-Card-CardGraphic.html#method___construct"
         },                {
             "fqsen": "\\App\\Card\\CardGraphic\u003A\u003AgetAsString\u0028\u0029",
             "name": "getAsString",
-            "summary": "",
+            "summary": "Returns\u0020a\u0020string\u0020with\u0020the\u0020graphic\u0020card.",
             "url": "classes/App-Card-CardGraphic.html#method_getAsString"
         },                {
             "fqsen": "\\App\\Card\\CardGraphic\u003A\u003AgetValue\u0028\u0029",
             "name": "getValue",
-            "summary": "",
+            "summary": "Returns\u0020the\u0020cards\u0020value\u0020as\u0020an\u0020int.",
             "url": "classes/App-Card-CardGraphic.html#method_getValue"
         },                {
             "fqsen": "\\App\\Card\\CardGraphic\u003A\u003A\u0024representation",
             "name": "representation",
-            "summary": "",
+            "summary": "All\u0020the\u0020graphics\u0020of\u0020a\u0020card\u0020deck.",
             "url": "classes/App-Card-CardGraphic.html#property_representation"
         },                {
             "fqsen": "\\App\\Card\\CardGraphic\u003A\u003A\u0024numberValue",
             "name": "numberValue",
-            "summary": "",
+            "summary": "All\u0020values\u0020of\u0020a\u0020card\u0020deck.",
             "url": "classes/App-Card-CardGraphic.html#property_numberValue"
         },                {
             "fqsen": "\\App\\Card\\CardHand",
@@ -68,22 +68,22 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Card\\CardHand\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "",
+            "summary": "Creates\u0020an\u0020empty\u0020hand.\u0020No\u0020cards\u0020are\u0020added\u0020from\u0020the\u0020beginning,\u0020they\u0020must\u0020be\u0020added\u0020via\u0020another\u0020method.",
             "url": "classes/App-Card-CardHand.html#method___construct"
         },                {
             "fqsen": "\\App\\Card\\CardHand\u003A\u003AaddToHand\u0028\u0029",
             "name": "addToHand",
-            "summary": "",
+            "summary": "Adds\u0020a\u0020card\u0020to\u0020the\u0020hand.\u0020Tha\u0020card\u0020is\u0020an\u0020object\u0020of\u0020the\u0020CardGraphic\u002Dclass.",
             "url": "classes/App-Card-CardHand.html#method_addToHand"
         },                {
             "fqsen": "\\App\\Card\\CardHand\u003A\u003AgetHandAsString\u0028\u0029",
             "name": "getHandAsString",
-            "summary": "",
+            "summary": "Returns\u0020the\u0020hand\u0020as\u0020an\u0020array\u0020containing\u0020graphics\u0020of\u0020the\u0020cards\u0020as\u0020a\u0020string.",
             "url": "classes/App-Card-CardHand.html#method_getHandAsString"
         },                {
             "fqsen": "\\App\\Card\\CardHand\u003A\u003AcountHand\u0028\u0029",
             "name": "countHand",
-            "summary": "",
+            "summary": "Counts\u0020the\u0020sum\u0020of\u0020all\u0020the\u0020cards\u0020in\u0020the\u0020hand\u0020and\u0020returns\u0020sum.",
             "url": "classes/App-Card-CardHand.html#method_countHand"
         },                {
             "fqsen": "\\App\\Card\\CardHand\u003A\u003A\u0024value",
@@ -98,22 +98,22 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Card\\DeckOfCards\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "",
+            "summary": "Constructs\u0020the\u0020deck\u0020and\u0020creates\u0020a\u0020sorted\u0020deck\u0020containing\u0020CardGraphic\u002Dobjects.",
             "url": "classes/App-Card-DeckOfCards.html#method___construct"
         },                {
             "fqsen": "\\App\\Card\\DeckOfCards\u003A\u003AshuffledDeck\u0028\u0029",
             "name": "shuffledDeck",
-            "summary": "",
+            "summary": "Creates\u0020a\u0020shuffled\u0020deck\u0020containing\u0020CardGraphic\u002Dobjects.",
             "url": "classes/App-Card-DeckOfCards.html#method_shuffledDeck"
         },                {
             "fqsen": "\\App\\Card\\DeckOfCards\u003A\u003AdrawCards\u0028\u0029",
             "name": "drawCards",
-            "summary": "",
+            "summary": "Draws\u0020cards\u0020from\u0020the\u0020top\u0020af\u0020the\u0020deck\u0020and\u0020returns\u0020the\u0020rest\u0020of\u0020the\u0020deck\u0020and\u0020the\u0020discarded\u0020cards\u0020as\u0020separate\u0020arrays\u0020in\u0020one\u0020array.",
             "url": "classes/App-Card-DeckOfCards.html#method_drawCards"
         },                {
             "fqsen": "\\App\\Card\\DeckOfCards\u003A\u003AgetDeckAsString\u0028\u0029",
             "name": "getDeckAsString",
-            "summary": "",
+            "summary": "Returns\u0020all\u0020the\u0020cards\u0020in\u0020the\u0020deck\u0020as\u0020an\u0020array\u0020of\u0020strings.",
             "url": "classes/App-Card-DeckOfCards.html#method_getDeckAsString"
         },                {
             "fqsen": "\\App\\Card\\DeckOfCards\u003A\u003A\u0024value",

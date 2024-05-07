@@ -6,7 +6,7 @@ use PHPUnit\Framework\TestCase;
 
 
 /**
- * Test cases for class CardGraphic.
+ * Test cases for class CardHand.
  */
 class CardHandTest extends TestCase
 {

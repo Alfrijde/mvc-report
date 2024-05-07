@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * The CardHand-class. Contains objects of the cardGraphic-class to create a card hand for a player.
+ */
 namespace App\Card;
 
 use App\Card\CardGraphic;
@@ -12,6 +14,9 @@ class CardHand
  */
     // @phpstan-ignore-next-line
     protected array $value;
+    /**
+     * Creates an empty hand. No cards are added from the beginning, they must be added via another method.
+     */
 
     public function __construct()
     {
@@ -19,6 +24,10 @@ class CardHand
 
         $this->value = $hand;
     }
+    /**
+     * Adds a card to the hand. Tha card is an object of the CardGraphic-class.
+     * Cards are added to the back of the array that is the hand.
+     */
 
     public function addToHand(CardGraphic $card): void
     {
@@ -27,6 +36,7 @@ class CardHand
         $this-> value = $hand;
     }
     /**
+     * Returns the hand as an array containing graphics of the cards as a string.
      * @return array<string>
      */
 
@@ -44,6 +54,10 @@ class CardHand
 
         return $stringDeck;
     }
+    /**
+     * Counts the sum of all the cards in the hand and returns sum.
+     * If the hand contains aces to sums are made and compared and the more favourable sum is returned.
+     */
 
     public function countHand(): int
     {
