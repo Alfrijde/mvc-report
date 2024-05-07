@@ -61,7 +61,7 @@ class DeckOfCards
     /**
      * Draws cards from the top af the deck and returns the rest of the deck and the discarded cards as separate arrays in one array.
      * The default number of cards is one card.
-     * @return array<array<object>>
+     * @return array<array>
      */
 
     public function drawCards(int $num = 1): array
@@ -79,7 +79,7 @@ class DeckOfCards
 
     }
     /**
-     * Returns all the cards in the deck as an array of strings. 
+     * Returns all the cards in the deck as an array of strings.
      * As the class contains objects of the CardGraphic-class the string is an utf-8 icon.
      * @return array<string>
      */

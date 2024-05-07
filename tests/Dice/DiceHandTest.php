@@ -4,7 +4,6 @@ namespace App\Dice;
 
 use PHPUnit\Framework\TestCase;
 
-
 /**
  * Test cases for class DiceHand.
  */
@@ -35,8 +34,8 @@ class DiceHandTest extends TestCase
     /**
      * Test the getNumberDices-function, that it returns an int.
      */
-    public function testNumberDice() 
-    {        
+    public function testNumberDice()
+    {
         $stub = $this->createMock(Dice::class);
         $dicehand = new DiceHand();
         $dicehand->add(clone $stub);
@@ -45,7 +44,7 @@ class DiceHandTest extends TestCase
 
     }
 
-        /**
+    /**
      * Stub the dices to assure the value can be asserted.
      */
     public function testGetAllValuesOfDice()
@@ -67,7 +66,7 @@ class DiceHandTest extends TestCase
         $this->assertEquals([6,6], $res);
     }
 
-            /**
+    /**
      * Stub the dices to assure the value can be asserted.
      */
     public function testGetAllStringsOfDice()
@@ -89,5 +88,5 @@ class DiceHandTest extends TestCase
         $this->assertEquals(['6','6'], $res);
     }
 
-    
+
 }

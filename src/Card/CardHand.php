@@ -2,6 +2,7 @@
 /**
  * The CardHand-class. Contains objects of the cardGraphic-class to create a card hand for a player.
  */
+
 namespace App\Card;
 
 use App\Card\CardGraphic;

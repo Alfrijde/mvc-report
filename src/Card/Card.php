@@ -2,6 +2,7 @@
 /**
  * The Card-class.
  */
+
 namespace App\Card;
 
 class Card

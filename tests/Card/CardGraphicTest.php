@@ -4,7 +4,6 @@ namespace App\Card;
 
 use PHPUnit\Framework\TestCase;
 
-
 /**
  * Test cases for class CardGraphic.
  */
@@ -26,7 +25,7 @@ class CardGraphicTest extends TestCase
      * Tests the getAsString-functions of CardGraphic
      */
     public function testGet()
-     {
+    {
         $card = new CardGraphic();
 
         $res = $card->getAsString();

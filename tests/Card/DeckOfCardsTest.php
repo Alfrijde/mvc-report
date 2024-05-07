@@ -4,7 +4,6 @@ namespace App\Card;
 
 use PHPUnit\Framework\TestCase;
 
-
 /**
  * Test cases for class DeckOfCards.
  */
@@ -40,7 +39,7 @@ class DeckOfCardsTest extends TestCase
         $this->assertEquals(1, count($drawnCard));
     }
 
-        /**
+    /**
      * Test the draw card-function with arguments.
      */
     public function testDrawCardsWithArgs()

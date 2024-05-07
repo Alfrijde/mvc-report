@@ -4,7 +4,6 @@ namespace App\Card;
 
 use PHPUnit\Framework\TestCase;
 
-
 /**
  * Test cases for class CardHand.
  */
@@ -51,7 +50,7 @@ class CardHandTest extends TestCase
     public function testSumOfCarHand()
     {
         $hand = new CardHand();
-   
+
         $card1 = $this->createMock(CardGraphic::class);
         $card2 = $this->createMock(CardGraphic::class);
 
@@ -78,7 +77,7 @@ class CardHandTest extends TestCase
     public function testSumOfCarHandOneAceHigh()
     {
         $hand = new CardHand();
-   
+
         $card1 = $this->createMock(CardGraphic::class);
         $card2 = $this->createMock(CardGraphic::class);
 
@@ -99,14 +98,14 @@ class CardHandTest extends TestCase
         $this->assertEquals(12, $res);
     }
 
-    
+
     /**
      * Test Sum-function with ace and low card
      */
     public function testSumOfCarHandOneAceLow()
     {
         $hand = new CardHand();
-   
+
         $card1 = $this->createMock(CardGraphic::class);
         $card2 = $this->createMock(CardGraphic::class);
 
