@@ -1,0 +1,19 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Me{% endblock %}
+
+{% block body %}
+<div class="main">
+<table>
+
+{% for book in books %}
+<tr>
+<td><a href="{{ path('library_show_details', {id: book.id }) }}">{{book.name}}</a></td>
+<td>{{book.author}}</td>
+<td>{{book.image}}</td>
+</tr>
+{% endfor %}
+</table>
+
+</div>
+{% endblock %}
