@@ -1,6 +1,6 @@
 {% extends "base.html.twig" %}
 
-{% block title %}Me{% endblock %}
+{% block title %}Show book{% endblock %}
 
 {% block body %}
 <div class="main">
@@ -13,8 +13,8 @@
 </tr>
 </table>
 
-<a href="{path('update_book', {id: book.id })}">Uppdatera information</a>
-<a href="{path('delete_book', {id: book.id })}">Radera bok</a>
+<a href="{{ path('update_book', {'id': book.id })}}">Uppdatera information</a>
+<a href="{{ path('delete_book', {'id': book.id })}}">Radera bok</a>
 
 </div>
 {% endblock %}

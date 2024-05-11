@@ -4,16 +4,19 @@
 
 {% block body %}
 <div class="main">
-<form>
-<
-<td>{{book.name}}</td>
-<td>{{book.author}}</td>
-<td>{{book.isbn}}</td>
-<td>{{book.image}}</td>
-</tr>
-</form>
 
-<a href="{path('update_process', {id: book.id })}">Uppdatera information</a>
+<form method="post" action="">
+    <p>
+    <input type="text" name="name" value="{{book.name}}" placeholder="{{book.name}}">
+    <input type="text" name="author" value="{{book.author}}" placeholder="{{book.author}}">
+    <input type="text" name="isbn" value="{{book.ISBN}}" placeholder="{{book.ISBN}}">
+    <input type="text" name="image" value="{{book.image}}" placeholder="{{book.image}}">
+    <input type="submit" name="submit" value="Uppdatera"
+    onClick="this.form.action='{{ path('book_update_process', {'id': book.id}) }}';"
+>
+
+
+
 
 
 </div>

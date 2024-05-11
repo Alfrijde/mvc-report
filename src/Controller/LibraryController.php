@@ -17,9 +17,7 @@ class LibraryController extends AbstractController
     #[Route('/library', name: 'app_library')]
     public function index(): Response
     {
-        return $this->render('library/index.html.twig', [
-            'controller_name' => 'LibraryController',
-        ]);
+        return $this->render('library/index.html.twig');
     }
 
     #[Route('/library/add', name: 'library_add')]
@@ -96,7 +94,7 @@ class LibraryController extends AbstractController
         return $this->redirectToRoute('library_show_all');
     }
 
-    #[Route('/library/update/{id}', name: 'update_book', method:['GET'])]
+    #[Route('/library/update/{id}', name: 'update_book')]
     public function updateBook(
         ManagerRegistry $doctrine,
         int $id
@@ -112,6 +110,36 @@ class LibraryController extends AbstractController
         return $this->render('library/update.html.twig', [
             'book' => $book,
         ]);
+    }
+
+    #[Route('/product/update_process/{id}', name: 'book_update_process', methods:['POST'])]
+    public function updateBookProcess(
+        ManagerRegistry $doctrine,
+        Request $request,
+        int $id
+    ): Response {
+
+        $name = $request->request->get('name');
+        $author = $request->request->get('author');
+        $isbn = $request->request->get('isbn');
+        $image = $request->request->get('image');
+
+        $entityManager = $doctrine->getManager();
+        $book = $entityManager->getRepository(Book::class)->find($id);
+
+        if (!$book) {
+            throw $this->createNotFoundException(
+                'No product found for id '.$id
+            );
+        }
+
+        $book->setName($name);
+        $book->setAuthor($author);
+        $book->setISBN($isbn);
+        $book->setImage($image);
+        $entityManager->flush();
+
+        return $this->redirectToRoute('library_show_details', ['id' =>$id]);
     }
 
 }
