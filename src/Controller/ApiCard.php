@@ -140,9 +140,9 @@ class ApiCard extends AbstractController
     #[Route('/api/library/book/{isbn}', name: 'api_isbn')]
     public function showDetails(
         BookRepository $bookRepository,
-        int $isbn
+        string $isbn
     ): Response {
-        setType($isbn, "integer");
+        
         $book = $bookRepository
             ->findOneByISBNField($isbn);
 

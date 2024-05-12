@@ -20,9 +20,9 @@ class Book
 
     private ?string $name = null;
 
-    #[ORM\Column]
+    #[ORM\Column(length: 255)]
     #[Assert\NotBlank]
-    private ?int $ISBN = null;
+    private ?string $ISBN = null;
 
     #[ORM\Column(length: 255)]
     #[Assert\NotBlank]
@@ -48,12 +48,12 @@ class Book
         return $this;
     }
 
-    public function getISBN(): ?int
+    public function getISBN(): ?string
     {
         return $this->ISBN;
     }
 
-    public function setISBN(int $ISBN): static
+    public function setISBN(string $ISBN): static
     {
         $this->ISBN = $ISBN;
 

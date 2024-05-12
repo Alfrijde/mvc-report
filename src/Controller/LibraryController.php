@@ -124,7 +124,6 @@ class LibraryController extends AbstractController
         $isbn = $request->request->get('isbn');
         $image = $request->request->get('image');
 
-        setType($isbn, "integer");
 
         $entityManager = $doctrine->getManager();
         $book = $entityManager->getRepository(Book::class)->find($id);
