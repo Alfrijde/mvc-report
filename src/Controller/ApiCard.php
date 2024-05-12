@@ -142,6 +142,7 @@ class ApiCard extends AbstractController
         BookRepository $bookRepository,
         int $isbn
     ): Response {
+        setType($isbn, "integer");
         $book = $bookRepository
             ->findOneByISBNField($isbn);
 
