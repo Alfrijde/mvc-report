@@ -11,6 +11,8 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use App\Card\Card;
 use App\Card\CardGraphic;
 use App\Card\DeckOfCards;
+use App\Repository\BookRepository;
+use Doctrine\Persistence\ManagerRegistry;
 
 ;
 
@@ -118,8 +120,36 @@ class ApiCard extends AbstractController
             $response->getEncodingOptions() | JSON_PRETTY_PRINT
         );
         return $response;
+    }
+
+    #[Route('/api/library/books', name: 'api_books')]
+    public function showAllBooks(
+        BookRepository $bookRepository
+    ): Response {
+        $books = $bookRepository
+            ->findAll();
 
 
+        $response = $this->json($books);
+        $response->setEncodingOptions(
+            $response->getEncodingOptions() | JSON_PRETTY_PRINT
+        );
+        return $response;
+    }
+
+    #[Route('/api/library/book/{isbn}', name: 'api_isbn')]
+    public function showDetails(
+        BookRepository $bookRepository,
+        int $isbn
+    ): Response {
+        $book = $bookRepository
+            ->findOneByISBNField($isbn);
+
+        $response = $this->json($book);
+        $response->setEncodingOptions(
+            $response->getEncodingOptions() | JSON_PRETTY_PRINT
+        );
+        return $response;
     }
 
 }

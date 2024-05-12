@@ -41,5 +41,12 @@
     <a href="{{ path('api_game') }}">Kortspel</a>
     <p>Se den nuvarande ställningen i kortpelet 21</p>
 
+    <a href="{{ path('api_books') }}">Alla böcker</a>
+    <p>Visar alla böcker i biblioteket</p>
+
+    
+    <a href="{{ path('api_isbn', {isbn: 9780618968633 }) }}">Se en bok</a>
+    <p>Visar en bok via isbn-nummer</p>
+
 </div>
 {% endblock %}
