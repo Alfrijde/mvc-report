@@ -31,13 +31,13 @@ class BookRepository extends ServiceEntityRepository
     //        ;
     //    }
 
-       public function findOneByISBNField($isbn): ?Book
-       {
-           return $this->createQueryBuilder('b')
-               ->andWhere('b.ISBN = :val')
-               ->setParameter('val', $isbn)
-               ->getQuery()
-               ->getOneOrNullResult()
-           ;
-       }
+    public function findOneByISBNField(int $isbn): ?Book
+    {
+        return $this->createQueryBuilder('b')
+            ->andWhere('b.ISBN = :val')
+            ->setParameter('val', $isbn)
+            ->getQuery()
+            ->getOneOrNullResult()
+        ;
+    }
 }

@@ -36,7 +36,7 @@ class LibraryController extends AbstractController
 
 
             $entityManager->persist($book);
-    
+
             // actually executes the queries (i.e. the INSERT query)
             $entityManager->flush();
 
@@ -60,7 +60,7 @@ class LibraryController extends AbstractController
         ]);
     }
 
-    
+
     #[Route('/library/show/{id}', name: 'library_show_details')]
     public function showDetails(
         BookRepository $bookRepository,
@@ -139,7 +139,7 @@ class LibraryController extends AbstractController
         $book->setImage($image);
         $entityManager->flush();
 
-        return $this->redirectToRoute('library_show_details', ['id' =>$id]);
+        return $this->redirectToRoute('library_show_details', ['id' => $id]);
     }
 
 }

@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * The Book entity. Creates a book object with connection to the database.
+ */
 namespace App\Entity;
 
 use App\Repository\BookRepository;

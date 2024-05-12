@@ -142,4 +142,4 @@ class ProductController extends AbstractController
 
         return $this->json($products);
     }
-    }
+}
