@@ -9,10 +9,14 @@
     <h1>Välkommen till biblioteket</h1>
 
     <p>
-    <ul>
-    <li><a href="{{ path('library_show_all') }}">Här kan du se alla böcker</a></li>
-    <li><a href="{{ path('library_add') }}">Lägg till bok i biblioteket</a></li>
-    </ul>
+    Här kan du se alla böcker: <a class="button-library" href="{{ path('library_show_all') }}">Till böckerna</a></li>
+    </p>
+    <p>
+    Vill du lägga till en bok så gör du det här:
+    <a class="button-library" href="{{ path('library_add') }}">Lägg till bok</a>
+    </p>
+    <img class="image-library" src="{{ asset('img/books-5937716_1280.jpg')}}" width="600">
+
 
 
 </div>

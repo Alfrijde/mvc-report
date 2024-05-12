@@ -4,17 +4,15 @@
 
 {% block body %}
 <div class="main">
-<table>
-<tr>
-<td>{{book.name}}</td>
-<td>{{book.author}}</td>
-<td>{{book.isbn}}</td>
-<td>{{book.image}}</td>
-</tr>
+<table class="table-library">
+<tr><td class="label">Name:</td><td>{{book.name}}</td></tr>
+<tr><td class="label">Author:</td><td>{{book.author}}</td></tr>
+<tr><td class="label">ISBN:</td><td>{{book.isbn}}</td></tr>
+<img class="book-image" src="{{book.image}}">
 </table>
 
-<a href="{{ path('update_book', {'id': book.id })}}">Uppdatera information</a>
-<a href="{{ path('delete_book', {'id': book.id })}}">Radera bok</a>
+<a class="button-library" href="{{ path('update_book', {'id': book.id })}}">Uppdatera information</a>
+<a class="button-library" href="{{ path('delete_book', {'id': book.id })}}">Radera bok</a>
 
 </div>
 {% endblock %}

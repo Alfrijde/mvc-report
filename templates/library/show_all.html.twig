@@ -4,13 +4,11 @@
 
 {% block body %}
 <div class="main">
-<table>
-
+<table class="show-library">
 {% for book in books %}
 <tr>
-<td><a href="{{ path('library_show_details', {id: book.id }) }}">{{book.name}}</a></td>
-<td>{{book.author}}</td>
-<td>{{book.image}}</td>
+<td><img class="thumbnail" src="{{book.image}}"></img></td>
+<td><a href="{{ path('library_show_details', {id: book.id }) }}">{{book.name}} av {{book.author}}</a></td>
 </tr>
 {% endfor %}
 </table>

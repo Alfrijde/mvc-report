@@ -5,15 +5,19 @@
 {% block body %}
 <div class="main">
 
-<form method="post" action="">
-    <p>
+<form method="post" action="" class="update-form">
+    <label class="label-library">Name</label>
     <input type="text" name="name" value="{{book.name}}" placeholder="{{book.name}}">
+    <label class="label-library">Author</label>
     <input type="text" name="author" value="{{book.author}}" placeholder="{{book.author}}">
+    <label class="label-library">ISBN</label>
     <input type="text" name="isbn" value="{{book.ISBN}}" placeholder="{{book.ISBN}}">
+    <label class="label-library">Image</label>
     <input type="text" name="image" value="{{book.image}}" placeholder="{{book.image}}">
-    <input type="submit" name="submit" value="Uppdatera"
+    <input type="submit" name="submit" value="Uppdatera" class="button-library"
     onClick="this.form.action='{{ path('book_update_process', {'id': book.id}) }}';"
 >
+</form>
 
 
 
