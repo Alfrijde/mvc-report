@@ -28,6 +28,8 @@ class LibraryControllerTest extends WebTestCase
         // Validate a successful response and some content
         $this->assertResponseIsSuccessful();
         $this->assertSelectorTextContains('h1', 'Välkommen till biblioteket');
+        
+
     }
 
     /**
@@ -47,7 +49,7 @@ class LibraryControllerTest extends WebTestCase
         // Validate a successful response and some content
         $this->assertResponseIsSuccessful();
         $this->assertSelectorTextContains('table', 'The Hobbit');
-        #$client->catchExceptions(false);
+        $client->catchExceptions(false);
     }
         /**
  * Tests if the specified book is displayed
@@ -66,6 +68,6 @@ class LibraryControllerTest extends WebTestCase
       // Validate a successful response and some content
       $this->assertResponseIsSuccessful();
       $this->assertSelectorTextContains('table', 'The Hobbitses');
-      #$client->catchExceptions(false);
+      $client->catchExceptions(false);
   }
 }
