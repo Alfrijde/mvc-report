@@ -23,7 +23,7 @@ class DiceGameControllerTest extends WebTestCase
         
 
         // Request a specific page
-        $crawler = $client->request('GET', '/game/pig/init');
+        $client->request('GET', '/game/pig/init');
 
         // Validate a successful response and some content
         $this->assertResponseIsSuccessful();
@@ -43,7 +43,7 @@ class DiceGameControllerTest extends WebTestCase
         
 
         // Request a specific page
-        $crawler = $client->request('GET', '/game/pig/test/roll/2');
+        $client->request('GET', '/game/pig/test/roll/2');
 
         // Validate a successful response and some content
         $this->assertResponseIsSuccessful();
@@ -63,7 +63,7 @@ class DiceGameControllerTest extends WebTestCase
       
 
       // Request a specific page
-      $crawler = $client->request('GET', '/game/pig/test/dicehand/5');
+      $client->request('GET', '/game/pig/test/dicehand/5');
 
       // Validate a successful response and some content
       $this->assertResponseIsSuccessful();

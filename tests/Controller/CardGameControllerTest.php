@@ -23,19 +23,18 @@ class CardGameControllerTest extends WebTestCase
         
 
         // Request a specific page
-        $crawler = $client->request('GET', '/card/deck');
+        $client->request('GET', '/card/deck');
 
         // Validate a successful response and some content
         $this->assertResponseIsSuccessful();
         $this->assertSelectorTextContains('h1', 'Hela kortleken');
-        $client->catchExceptions(false);
     }
 
     /**
- * Tests if the roll function works
+ * Tests if the deck is displayed
   */
 
-    public function testPigRoll(): void
+    public function testDeckShuffle(): void
     {
         // This calls KernelTestCase::bootKernel(), and creates a
         // "client" that is acting as the browser
@@ -43,33 +42,11 @@ class CardGameControllerTest extends WebTestCase
         
 
         // Request a specific page
-        $crawler = $client->request('GET', '/game/pig/test/roll/2');
+        $client->request('GET', '/card/deck/shuffle');
 
         // Validate a successful response and some content
         $this->assertResponseIsSuccessful();
-        $this->assertSelectorTextContains('p', 'You rolled 2 dices. Here is the value of the dices.');
+        $this->assertSelectorTextContains('p', 'Här är kortleken:');
         #$client->catchExceptions(false);
     }
-
-        /**
- * Tests if the roll function works with a hand
-  */
-
-  public function testPigRollHand(): void
-  {
-      // This calls KernelTestCase::bootKernel(), and creates a
-      // "client" that is acting as the browser
-      $client = static::createClient();
-      
-
-      // Request a specific page
-      $crawler = $client->request('GET', '/game/pig/test/dicehand/5');
-
-      // Validate a successful response and some content
-      $this->assertResponseIsSuccessful();
-      $this->assertSelectorTextContains('p', 'You rolled 5 dices. Here is the value of the dices.');
-      #$client->catchExceptions(false);
-  }
-
-
 }
