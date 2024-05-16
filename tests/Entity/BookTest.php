@@ -18,6 +18,7 @@ class BookTest extends TestCase
         $book->setName('Hästen och hans pojke');
         $book->setISBN('123456789');
         $book->setAuthor('C.S. Lewis');
+        $book->setImage('/img/a_nice_cover.png');
 
         $bookRepository = $this->createMock(ObjectRepository::class);
 
@@ -31,6 +32,7 @@ class BookTest extends TestCase
         $this->assertEquals('Hästen och hans pojke', $book->getName());
         $this->assertEquals('123456789', $book->getISBN());
         $this->assertEquals('C.S. Lewis', $book->getAuthor());
+        $this->assertEquals('/img/a_nice_cover.png', $book->getImage());
 
     }
 
