@@ -15,8 +15,7 @@ class CardGameController extends AbstractController
 {
     #[Route("/session", name: "session", methods: ['GET'])]
     public function session(
-        Request $request,
-        SessionInterface $session
+        Request $request
     ): Response {
 
         $session = $request->getSession();

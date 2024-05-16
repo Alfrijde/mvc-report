@@ -75,7 +75,7 @@ class CardHand
 
         }
 
-        if ($ifAces) {
+        if (! empty($ifAces)) {
             $total2 = $total + 13;
 
             if ($total2 <= 21) {

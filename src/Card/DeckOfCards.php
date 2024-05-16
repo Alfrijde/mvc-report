@@ -61,7 +61,7 @@ class DeckOfCards
     /**
      * Draws cards from the top af the deck and returns the rest of the deck and the discarded cards as separate arrays in one array.
      * The default number of cards is one card.
-     * @return array<array>
+     * @return array<object, array>
      */
 
     public function drawCards(int $num = 1): array
@@ -88,8 +88,9 @@ class DeckOfCards
     {
         $deck = $this->value;
         $stringDeck = [];
+        $counter = count($deck);
 
-        for ($i = 0; $i < count($deck); $i++) {
+        for ($i = 0; $i < $counter; $i++) {
             $card = $deck[$i];
             $cardString = $card->getAsString();
             $stringDeck[] = $cardString;

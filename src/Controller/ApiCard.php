@@ -142,7 +142,7 @@ class ApiCard extends AbstractController
         BookRepository $bookRepository,
         string $isbn
     ): Response {
-        
+
         $book = $bookRepository
             ->findOneByISBNField($isbn);
 

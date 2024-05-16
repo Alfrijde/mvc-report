@@ -17,10 +17,10 @@ class DiceGraphicTest extends TestCase
     {
         $die = new DiceGraphic();
         $this->assertInstanceOf("\App\Dice\DiceGraphic", $die);
-        $res = $die->roll();
+        $res1 = $die->roll();
 
-        $res = $die->getAsString();
-        $this->assertNotEmpty($res);
+        $res2 = $die->getAsString();
+        $this->assertNotEmpty($res2);
     }
 
     /**
@@ -29,11 +29,9 @@ class DiceGraphicTest extends TestCase
     public function testGetValueDice()
     {
         $die = new DiceGraphic();
-        $res = $die->roll();
-
-        $res = $die->getAsString();
-
-        $this->assertIsString($res);
+        $res1 = $die->roll();
+        $res2 = $die->getAsString();
+        $this->assertIsString($res2);
     }
 
 
