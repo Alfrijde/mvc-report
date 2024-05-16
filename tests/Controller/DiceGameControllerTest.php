@@ -20,7 +20,7 @@ class DiceGameControllerTest extends WebTestCase
         // This calls KernelTestCase::bootKernel(), and creates a
         // "client" that is acting as the browser
         $client = static::createClient();
-        $client->catchExceptions(false);
+        
 
         // Request a specific page
         $crawler = $client->request('GET', '/game/pig/init');
@@ -28,6 +28,7 @@ class DiceGameControllerTest extends WebTestCase
         // Validate a successful response and some content
         $this->assertResponseIsSuccessful();
         $this->assertSelectorTextContains('h1', 'Pig game');
+        $client->catchExceptions(false);
     }
 
 
