@@ -29,6 +29,10 @@ class BookTest extends TestCase
             ->find(1);
 
         $this->assertEquals('Hästen och hans pojke', $book->getName());
+        $this->assertEquals('123456789', $book->getISBN());
+        $this->assertEquals('C.S. Lewis', $book->getAuthor());
 
     }
+
+
 }
