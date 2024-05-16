@@ -8,7 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 /**
  * Test cases for class DiceGameController.
  */
-class DiceGameCotrollerTest extends WebTestCase
+class DiceGameControllerTest extends WebTestCase
 /**
  * Tests if the init-page is loading
  */
