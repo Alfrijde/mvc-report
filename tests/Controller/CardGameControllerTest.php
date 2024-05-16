@@ -9,13 +9,13 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * Test cases for class DiceGameController.
  */
-class DiceGameControllerTest extends WebTestCase
+class CardGameControllerTest extends WebTestCase
 
 {
     /**
- * Tests if the init-page is loading
+ * Tests if the show deck page is loading.
  */
-    public function testInitPage(): void
+    public function testDeckPage(): void
     {
         // This calls KernelTestCase::bootKernel(), and creates a
         // "client" that is acting as the browser
@@ -23,12 +23,12 @@ class DiceGameControllerTest extends WebTestCase
         
 
         // Request a specific page
-        $crawler = $client->request('GET', '/game/pig/init');
+        $crawler = $client->request('GET', '/card/deck');
 
         // Validate a successful response and some content
         $this->assertResponseIsSuccessful();
-        $this->assertSelectorTextContains('h1', 'Pig game');
-
+        $this->assertSelectorTextContains('h1', 'Hela kortleken');
+        $client->catchExceptions(false);
     }
 
     /**

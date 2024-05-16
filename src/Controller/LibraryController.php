@@ -96,15 +96,15 @@ class LibraryController extends AbstractController
         int $id
     ): Response {
         $entityManager = $doctrine->getManager();
-        $product = $entityManager->getRepository(Product::class)->find($id);
+        $book = $entityManager->getRepository(book::class)->find($id);
 
-        if (!$product) {
+        if (!$book) {
             throw $this->createNotFoundException(
                 'No product found for id '.$id
             );
         }
 
-        $entityManager->remove($product);
+        $entityManager->remove($book);
         $entityManager->flush();
 
         return $this->redirectToRoute('library_show_all');
