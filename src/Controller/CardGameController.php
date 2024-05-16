@@ -1,4 +1,7 @@
 <?php
+/**
+ * The Card Game Controller.
+ */
 
 namespace App\Controller;
 
@@ -13,6 +16,9 @@ use App\Card\DeckOfCards;
 
 class CardGameController extends AbstractController
 {
+    /**
+     * Shows the current session.
+     */
     #[Route("/session", name: "session", methods: ['GET'])]
     public function session(
         Request $request
@@ -26,6 +32,9 @@ class CardGameController extends AbstractController
 
         return $this->render('card/session.html.twig', $data);
     }
+    /**
+     * Deletes the session.
+     */
 
     #[Route("/session/delete", name: "session_delete")]
     public function sessionDelete(
@@ -42,7 +51,9 @@ class CardGameController extends AbstractController
         return $this->redirectToRoute('session');
 
     }
-
+/**
+ * Initates the card game.
+ */
 
     #[Route("/card", name: "card_init")]
     public function init(
@@ -66,7 +77,9 @@ class CardGameController extends AbstractController
 
         return $this->render('card/show_deck.html.twig', $data);
     }
-
+/**
+ * Shuffles the card deck.
+ */
     #[Route("/card/deck/shuffle", name: "deck_shuffle")]
     public function shuffleDeck(
         SessionInterface $session
@@ -85,7 +98,9 @@ class CardGameController extends AbstractController
 
         return $this->render('card/show_deck.html.twig', $data);
     }
-
+/**
+ * Draws the specified number of cards from the deck.
+ */
     #[Route("/card/deck/draw/{num<\d+>}", name: "draw")]
     public function drawCard(
         int $num,
@@ -113,7 +128,9 @@ class CardGameController extends AbstractController
 
         return $this->render('card/discard.html.twig', $data);
     }
-
+/**
+ * Draws one card from the deck.
+ */
     #[Route("/card/deck/draw", name: "draw_one")]
     public function drawOne(SessionInterface $session): Response
     {

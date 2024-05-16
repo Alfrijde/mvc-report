@@ -1,4 +1,7 @@
 <?php
+/**
+ * Creates a form for the Book object.
+ */
 
 namespace App\Form;
 
@@ -11,6 +14,9 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 class BookFormType extends AbstractType
 {
+    /**
+     * Builds the form with the specified fields.
+     */
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
@@ -21,7 +27,9 @@ class BookFormType extends AbstractType
             ->add('submit', SubmitType::class)
         ;
     }
-
+/**
+ * Sets the book type.
+ */
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([

@@ -1,4 +1,7 @@
 <?php
+/**
+ * The game controller for the game 21.
+ */
 
 namespace App\Controller;
 
@@ -14,12 +17,18 @@ use App\Card\CardHand;
 
 class GameController extends AbstractController
 {
+    /**
+     * Shows the rules to the game and is the games homepage.
+     */
     #[Route("game/doc", name: "documentation")]
     public function doc(): Response
     {
 
         return $this->render('game/doc.html.twig');
     }
+    /**
+     * Initiates the game and saves the deck and the cardhands to the session.
+     */
     #[Route("game/", name: "game_init")]
     public function init(
         SessionInterface $session
@@ -38,6 +47,9 @@ class GameController extends AbstractController
 
         return $this->render('game/init.html.twig');
     }
+    /**
+     * The play part of the game.
+     */
 
     #[Route("game/play", name: "game_play", methods: ['GET'])]
     public function play(
@@ -61,7 +73,9 @@ class GameController extends AbstractController
 
         return $this->render('game/play.html.twig', $data);
     }
-
+/**
+ * Draws a card from the deck and saves iit to the card hand.
+ */
     #[Route("game/draw", name: "game_draw", methods: ['GET'])]
     public function draw(
         SessionInterface $session
@@ -91,6 +105,9 @@ class GameController extends AbstractController
 
         return $this->render('game/play.html.twig', $data);
     }
+    /**
+     * This route manages the bank player of the game.
+     */
 
     #[Route("game/bank", name: "game_bank", methods: ['GET'])]
     public function bank(
@@ -119,7 +136,9 @@ class GameController extends AbstractController
 
         return $this->redirectToRoute('game_end');
     }
-
+/**
+ * Sums up the game and all scores.
+ */
     #[Route("game/end", name: "game_end", methods: ['GET'])]
     public function end(
         SessionInterface $session
