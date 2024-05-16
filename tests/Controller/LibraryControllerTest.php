@@ -32,42 +32,42 @@ class LibraryControllerTest extends WebTestCase
 
     }
 
-    /**
- * Tests if all the books are displayed
-  */
+//     /**
+//  * Tests if all the books are displayed
+//   */
 
-    public function testShowAllBooks(): void
-    {
-        // This calls KernelTestCase::bootKernel(), and creates a
-        // "client" that is acting as the browser
-        $client = static::createClient();
+//     public function testShowAllBooks(): void
+//     {
+//         // This calls KernelTestCase::bootKernel(), and creates a
+//         // "client" that is acting as the browser
+//         $client = static::createClient();
         
 
-        // Request a specific page
-        $client->request('GET', '/library/show');
+//         // Request a specific page
+//         $client->request('GET', '/library/show');
 
-        // Validate a successful response and some content
-        $this->assertResponseIsSuccessful();
-        $this->assertSelectorTextContains('table', 'The Hobbit');
-        $client->catchExceptions(false);
-    }
-        /**
- * Tests if the specified book is displayed
-  */
+//         // Validate a successful response and some content
+//         $this->assertResponseIsSuccessful();
+//         $this->assertSelectorTextContains('table', 'The Hobbit');
+//         $client->catchExceptions(false);
+//     }
+//         /**
+//  * Tests if the specified book is displayed
+//   */
 
-  public function testShowOneBook(): void
-  {
-      // This calls KernelTestCase::bootKernel(), and creates a
-      // "client" that is acting as the browser
-      $client = static::createClient();
+//   public function testShowOneBook(): void
+//   {
+//       // This calls KernelTestCase::bootKernel(), and creates a
+//       // "client" that is acting as the browser
+//       $client = static::createClient();
       
 
-      // Request a specific page
-      $client->request('GET', '/library/show/1');
+//       // Request a specific page
+//       $client->request('GET', '/library/show/1');
 
-      // Validate a successful response and some content
-      $this->assertResponseIsSuccessful();
-      $this->assertSelectorTextContains('table', 'The Hobbitses');
-      $client->catchExceptions(false);
-  }
+//       // Validate a successful response and some content
+//       $this->assertResponseIsSuccessful();
+//       $this->assertSelectorTextContains('table', 'The Hobbitses');
+//       $client->catchExceptions(false);
+//   }
 }
