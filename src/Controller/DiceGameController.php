@@ -13,12 +13,17 @@ use App\Dice\DiceHand;
 
 class DiceGameController extends AbstractController
 {
+    /**
+     * Creates the homepage for the pig game.
+     */
     #[Route("/game/pig", name: "pig_start")]
     public function home(): Response
     {
         return $this->render('pig/home.html.twig');
     }
-
+/**
+ * Test the roll method on one dice.
+ */
     #[Route("/game/pig/test/roll", name: "test_roll_dice")]
     public function testRollDice(): Response
     {
@@ -32,6 +37,10 @@ class DiceGameController extends AbstractController
 
         return $this->render('pig/test/roll.html.twig', $data);
     }
+
+/**
+ * Tests to roll multiple dice, determined by the url.
+ */
 
     #[Route("/game/pig/test/roll/{num<\d+>}", name: "test_roll_num_dices")]
     public function testRollDices(int $num): Response
@@ -55,6 +64,9 @@ class DiceGameController extends AbstractController
 
         return $this->render('pig/test/roll_many.html.twig', $data);
     }
+    /** 
+     * Creates a DiceHand and rolls the die in the hand.
+      */
 
     #[Route("/game/pig/test/dicehand/{num<\d+>}", name: "test_dicehand")]
     public function testDiceHand(int $num): Response
@@ -81,12 +93,18 @@ class DiceGameController extends AbstractController
 
         return $this->render('pig/test/dicehand.html.twig', $data);
     }
+    /**
+     * Initiates the pig game.
+     */
 
     #[Route("/game/pig/init", name: "pig_init_get", methods: ['GET'])]
     public function init(): Response
     {
         return $this->render('pig/init.html.twig');
     }
+    /**
+     * Creates the players dicehand an preps the die and saves it all to the session.
+     */
 
     #[Route("/game/pig/init", name: "pig_init_post", methods: ['POST'])]
     public function initCallback(
@@ -108,7 +126,9 @@ class DiceGameController extends AbstractController
 
         return $this->redirectToRoute('pig_play');
     }
-
+/**
+ * The play-part of the game.
+ */
     #[Route("/game/pig/play", name: "pig_play", methods: ['GET'])]
     public function play(
         SessionInterface $session
@@ -124,7 +144,9 @@ class DiceGameController extends AbstractController
 
         return $this->render('pig/play.html.twig', $data);
     }
-
+/**
+ * The roll mecanism in the game that rolls the dice and controlls the rounds.
+ */
     #[Route("/game/pig/roll", name: "pig_roll", methods: ['POST'])]
     public function roll(
         SessionInterface $session
@@ -152,7 +174,9 @@ class DiceGameController extends AbstractController
 
         return $this->redirectToRoute('pig_play');
     }
-
+/**
+ * Saves the points to the session
+ */
     #[Route("/game/pig/save", name: "pig_save", methods: ['POST'])]
     public function save(
         SessionInterface $session
