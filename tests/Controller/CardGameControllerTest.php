@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * Test cases for class DiceGameController.
+ * Test cases for class CardGameController.
  */
 class CardGameControllerTest extends WebTestCase
 
