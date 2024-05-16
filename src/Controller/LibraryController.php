@@ -1,4 +1,7 @@
 <?php
+/** 
+ * The LibraryController for all the library routes.
+ */
 
 namespace App\Controller;
 
@@ -14,12 +17,17 @@ use App\Repository\BookRepository;
 
 class LibraryController extends AbstractController
 {
+    /**
+     * Home page for the library.
+     */
     #[Route('/library', name: 'app_library')]
     public function index(): Response
     {
         return $this->render('library/index.html.twig');
     }
-
+/**
+ * Route for adding a book to the library.
+ */
     #[Route('/library/add', name: 'library_add')]
     public function createBook(
         ManagerRegistry $doctrine,
@@ -47,6 +55,9 @@ class LibraryController extends AbstractController
             'form' => $form,
         ]);
     }
+    /**
+     * Route for showing all the books in the library.
+     */
 
     #[Route('/library/show', name: 'library_show_all')]
     public function showAllBooks(
@@ -59,7 +70,9 @@ class LibraryController extends AbstractController
             'books' => $books,
         ]);
     }
-
+/**
+ * Shows one book by the ida in the url.
+ */
 
     #[Route('/library/show/{id}', name: 'library_show_details')]
     public function showDetails(
@@ -73,6 +86,9 @@ class LibraryController extends AbstractController
             'book' => $book,
         ]);
     }
+    /**
+     * Deletes a book from the library by the id in the url.
+     */
 
     #[Route('/library/delete/{id}', name: 'delete_book')]
     public function deleteBookById(
@@ -93,7 +109,9 @@ class LibraryController extends AbstractController
 
         return $this->redirectToRoute('library_show_all');
     }
-
+/**
+ * Updates the information on the book specified by the id in the url.
+ */
     #[Route('/library/update/{id}', name: 'update_book')]
     public function updateBook(
         ManagerRegistry $doctrine,
@@ -111,6 +129,9 @@ class LibraryController extends AbstractController
             'book' => $book,
         ]);
     }
+    /**
+     * The updating process for the book specified by id in the url.
+     */
 
     #[Route('/product/update_process/{id}', name: 'book_update_process', methods:['POST'])]
     public function updateBookProcess(

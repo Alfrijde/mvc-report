@@ -1,4 +1,7 @@
 <?php
+/**
+ * The API controller.
+ */
 
 namespace App\Controller;
 
@@ -18,6 +21,9 @@ use Doctrine\Persistence\ManagerRegistry;
 
 class ApiCard extends AbstractController
 {
+    /**
+     * Shows a sorted card deck in Json.
+     */
     #[Route("/api/deck", name: "api_deck", methods: ['GET'])]
     public function apiDeck(
         SessionInterface $session
@@ -38,6 +44,9 @@ class ApiCard extends AbstractController
         );
         return $response;
     }
+    /**
+     * Shows a shuffled card deck in Json.
+     */
 
     #[Route("/api/deck/shuffle", name: "api_shuffle", methods: ['POST'])]
     public function apiShuffle(
@@ -59,6 +68,9 @@ class ApiCard extends AbstractController
         );
         return $response;
     }
+    /**
+     * Draws a number of cards and shows them and how many cards are left in the deck in a json format.
+     */
 
     #[Route("/api/deck/draw/{num<\d+>}", name: "api_draw", methods: ['POST'])]
     public function drawCard(
@@ -94,6 +106,9 @@ class ApiCard extends AbstractController
 
 
     }
+    /**
+     * Draws one and shows them it how many cards are left in the deck in a json format.
+     */
 
     #[Route("/api/deck/draw", name: "api_draw_one")]
     public function drawOne(SessionInterface $session): Response
@@ -121,6 +136,9 @@ class ApiCard extends AbstractController
         );
         return $response;
     }
+    /**
+     * Shows all books in the library in a json format.
+     */
 
     #[Route('/api/library/books', name: 'api_books')]
     public function showAllBooks(
@@ -136,6 +154,9 @@ class ApiCard extends AbstractController
         );
         return $response;
     }
+    /**
+     * Shows one book based on the isbn in a json format.
+     */
 
     #[Route('/api/library/book/{isbn}', name: 'api_isbn')]
     public function showDetails(

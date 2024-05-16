@@ -61,7 +61,10 @@ class DeckOfCards
     /**
      * Draws cards from the top af the deck and returns the rest of the deck and the discarded cards as separate arrays in one array.
      * The default number of cards is one card.
-     * @return array<object, array>
+     * @return array {
+     *                @type object $this
+     *                @type array $discard
+     *                 }
      */
 
     public function drawCards(int $num = 1): array

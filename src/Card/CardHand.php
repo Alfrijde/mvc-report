@@ -58,6 +58,7 @@ class CardHand
     /**
      * Counts the sum of all the cards in the hand and returns sum.
      * If the hand contains aces to sums are made and compared and the more favourable sum is returned.
+     * @return int
      */
 
     public function countHand(): int
