@@ -68,10 +68,26 @@ Här tänker jag försöka sänka komplexiteten med testningar och att skriva me
 <h3>PHPMetrics</h3>
 
 <p>Här lyckades jag få upp maintainabilityn på klasserna som var röda. Nu är alla antingen gula eller gröna. Jag trodde testerna skulle hjälpa lite mer att också få ner komplexiteten, men jag kunde tyvärr inte testa de mest komplexa metoderna i Controllersarna så det hjälpte inte så mycket. Något som verkligen fungerade var att kommentera koden, då blev filerna genast gula i stället för röda.  Jag fick bort två violations, det var två God-objects som var för kraftfulla och hade för många funktioner och tog in alldeles för många klasser. Den ena gjorde jag mig av med, det var en fil från en övning som jag inte kände att jag behövde ha kvar. Den andra var en Controller som jag delade upp i två i stället för en stor. </p>
+
+
+        <a href="{{ asset('img/Skärmbild 2024-05-15 1509045.png') }}">
+            <img src="{{ asset('img/Skärmbild 2024-05-15 1509045.png') }}" alt="" height="300"> 
+        </a>
+                <a href="{{ asset('img/Skärmbild 2024-05-17 155604.png') }}">
+            <img src="{{ asset('img/Skärmbild 2024-05-17 155604.png') }}" alt="" height="300"> 
+        </a>
+
 <h3>Scrutinizer</h3>
 <p>Här fick jag bort alla issues dom påverkade mina filer. Jag lyckades introducera några nya längs vägen men fick också bort dem.
 <br> Jag lyckades inte med min önskan om att få över 40% kodtäckning, den landade på 32% vilket är en klar förbättring. Problemet är alla Controller-filerna som är stora och svåra att testa. Jag hade tester som fungerade lokalt för LibraryControllerna men som inte fungerade när de laddades upp i Scrutinzer jag tror det blev något konstigt med sql-filen och sökvägen till den. Vilket är konstigt eftersom det fungerar när jag laddade upp den på studetnservern. Men Det är i alla fall en klar förbättring i kodtäckningen, jag lärde mig hur jag kan göra enkla tester på Controllers så det var bra.
 </p>
+
+        <a href="{{ asset('img/Skärmbild 2024-05-15 163435.png') }}">
+            <img src="{{ asset('img/Skärmbild 2024-05-15 163435.png') }}" alt="" width="700">
+        </a>
+                <a href="{{ asset('img/Skärmbild 2024-05-17 160116.png') }}">
+            <img src="{{ asset('img/Skärmbild 2024-05-17 160116.png') }}" alt="" width="700">
+        </a>
 
 <h2>Diskussion</h2>
 <p>
