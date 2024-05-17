@@ -10,7 +10,6 @@ use Doctrine\Persistence\ObjectRepository;
  * Test cases for the Entity Book.
  */
 class BookTest extends TestCase
-
 {
     public function testBook()
     {

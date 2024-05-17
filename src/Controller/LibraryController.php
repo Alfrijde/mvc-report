@@ -1,5 +1,5 @@
 <?php
-/** 
+/**
  * The LibraryController for all the library routes.
  */
 
@@ -25,9 +25,9 @@ class LibraryController extends AbstractController
     {
         return $this->render('library/index.html.twig');
     }
-/**
- * Route for adding a book to the library.
- */
+    /**
+     * Route for adding a book to the library.
+     */
     #[Route('/library/add', name: 'library_add')]
     public function createBook(
         ManagerRegistry $doctrine,
@@ -70,9 +70,9 @@ class LibraryController extends AbstractController
             'books' => $books,
         ]);
     }
-/**
- * Shows one book by the ida in the url.
- */
+    /**
+     * Shows one book by the ida in the url.
+     */
 
     #[Route('/library/show/{id}', name: 'library_show_details')]
     public function showDetails(
@@ -109,9 +109,9 @@ class LibraryController extends AbstractController
 
         return $this->redirectToRoute('library_show_all');
     }
-/**
- * Updates the information on the book specified by the id in the url.
- */
+    /**
+     * Updates the information on the book specified by the id in the url.
+     */
     #[Route('/library/update/{id}', name: 'update_book')]
     public function updateBook(
         ManagerRegistry $doctrine,

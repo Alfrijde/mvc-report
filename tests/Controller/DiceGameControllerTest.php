@@ -10,7 +10,6 @@ use Symfony\Component\Routing\Annotation\Route;
  * Test cases for class DiceGameController.
  */
 class DiceGameControllerTest extends WebTestCase
-
 {
     /**
  * Tests if the init-page is loading
@@ -20,7 +19,7 @@ class DiceGameControllerTest extends WebTestCase
         // This calls KernelTestCase::bootKernel(), and creates a
         // "client" that is acting as the browser
         $client = static::createClient();
-        
+
 
         // Request a specific page
         $client->request('GET', '/game/pig/init');
@@ -40,7 +39,7 @@ class DiceGameControllerTest extends WebTestCase
         // This calls KernelTestCase::bootKernel(), and creates a
         // "client" that is acting as the browser
         $client = static::createClient();
-        
+
 
         // Request a specific page
         $client->request('GET', '/game/pig/test/roll/2');
@@ -51,25 +50,25 @@ class DiceGameControllerTest extends WebTestCase
         #$client->catchExceptions(false);
     }
 
-        /**
+    /**
  * Tests if the roll function works with a hand
   */
 
-  public function testPigRollHand(): void
-  {
-      // This calls KernelTestCase::bootKernel(), and creates a
-      // "client" that is acting as the browser
-      $client = static::createClient();
-      
+    public function testPigRollHand(): void
+    {
+        // This calls KernelTestCase::bootKernel(), and creates a
+        // "client" that is acting as the browser
+        $client = static::createClient();
 
-      // Request a specific page
-      $client->request('GET', '/game/pig/test/dicehand/5');
 
-      // Validate a successful response and some content
-      $this->assertResponseIsSuccessful();
-      $this->assertSelectorTextContains('p', 'You rolled 5 dices. Here is the value of the dices.');
-      #$client->catchExceptions(false);
-  }
+        // Request a specific page
+        $client->request('GET', '/game/pig/test/dicehand/5');
+
+        // Validate a successful response and some content
+        $this->assertResponseIsSuccessful();
+        $this->assertSelectorTextContains('p', 'You rolled 5 dices. Here is the value of the dices.');
+        #$client->catchExceptions(false);
+    }
 
 
 }

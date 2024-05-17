@@ -13,6 +13,7 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use App\Card\Card;
 use App\Card\CardGraphic;
 use App\Card\DeckOfCards;
+use Exception;
 
 class CardGameController extends AbstractController
 {
@@ -51,9 +52,9 @@ class CardGameController extends AbstractController
         return $this->redirectToRoute('session');
 
     }
-/**
- * Initates the card game.
- */
+    /**
+     * Initates the card game.
+     */
 
     #[Route("/card", name: "card_init")]
     public function init(
@@ -77,9 +78,9 @@ class CardGameController extends AbstractController
 
         return $this->render('card/show_deck.html.twig', $data);
     }
-/**
- * Shuffles the card deck.
- */
+    /**
+     * Shuffles the card deck.
+     */
     #[Route("/card/deck/shuffle", name: "deck_shuffle")]
     public function shuffleDeck(
         SessionInterface $session
@@ -98,9 +99,9 @@ class CardGameController extends AbstractController
 
         return $this->render('card/show_deck.html.twig', $data);
     }
-/**
- * Draws the specified number of cards from the deck.
- */
+    /**
+     * Draws the specified number of cards from the deck.
+     */
     #[Route("/card/deck/draw/{num<\d+>}", name: "draw")]
     public function drawCard(
         int $num,
@@ -128,9 +129,9 @@ class CardGameController extends AbstractController
 
         return $this->render('card/discard.html.twig', $data);
     }
-/**
- * Draws one card from the deck.
- */
+    /**
+     * Draws one card from the deck.
+     */
     #[Route("/card/deck/draw", name: "draw_one")]
     public function drawOne(SessionInterface $session): Response
     {

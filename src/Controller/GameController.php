@@ -73,9 +73,9 @@ class GameController extends AbstractController
 
         return $this->render('game/play.html.twig', $data);
     }
-/**
- * Draws a card from the deck and saves iit to the card hand.
- */
+    /**
+     * Draws a card from the deck and saves iit to the card hand.
+     */
     #[Route("game/draw", name: "game_draw", methods: ['GET'])]
     public function draw(
         SessionInterface $session
@@ -136,9 +136,9 @@ class GameController extends AbstractController
 
         return $this->redirectToRoute('game_end');
     }
-/**
- * Sums up the game and all scores.
- */
+    /**
+     * Sums up the game and all scores.
+     */
     #[Route("game/end", name: "game_end", methods: ['GET'])]
     public function end(
         SessionInterface $session

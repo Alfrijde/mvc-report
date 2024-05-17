@@ -10,7 +10,6 @@ use Symfony\Component\Routing\Annotation\Route;
  * Test cases for class LibraryController.
  */
 class LibraryControllerTest extends WebTestCase
-
 {
     /**
  * Tests if the library home page is loading.
@@ -20,7 +19,7 @@ class LibraryControllerTest extends WebTestCase
         // This calls KernelTestCase::bootKernel(), and creates a
         // "client" that is acting as the browser
         $client = static::createClient();
-        
+
 
         // Request a specific page
         $client->request('GET', '/library');
@@ -28,46 +27,46 @@ class LibraryControllerTest extends WebTestCase
         // Validate a successful response and some content
         $this->assertResponseIsSuccessful();
         $this->assertSelectorTextContains('h1', 'Välkommen till biblioteket');
-        
+
 
     }
 
-//     /**
-//  * Tests if all the books are displayed
-//   */
+    //     /**
+    //  * Tests if all the books are displayed
+    //   */
 
-//     public function testShowAllBooks(): void
-//     {
-//         // This calls KernelTestCase::bootKernel(), and creates a
-//         // "client" that is acting as the browser
-//         $client = static::createClient();
-        
+    //     public function testShowAllBooks(): void
+    //     {
+    //         // This calls KernelTestCase::bootKernel(), and creates a
+    //         // "client" that is acting as the browser
+    //         $client = static::createClient();
 
-//         // Request a specific page
-//         $client->request('GET', '/library/show');
 
-//         // Validate a successful response and some content
-//         $this->assertResponseIsSuccessful();
-//         $this->assertSelectorTextContains('table', 'The Hobbit');
-//         $client->catchExceptions(false);
-//     }
-//         /**
-//  * Tests if the specified book is displayed
-//   */
+    //         // Request a specific page
+    //         $client->request('GET', '/library/show');
 
-//   public function testShowOneBook(): void
-//   {
-//       // This calls KernelTestCase::bootKernel(), and creates a
-//       // "client" that is acting as the browser
-//       $client = static::createClient();
-      
+    //         // Validate a successful response and some content
+    //         $this->assertResponseIsSuccessful();
+    //         $this->assertSelectorTextContains('table', 'The Hobbit');
+    //         $client->catchExceptions(false);
+    //     }
+    //         /**
+    //  * Tests if the specified book is displayed
+    //   */
 
-//       // Request a specific page
-//       $client->request('GET', '/library/show/1');
+    //   public function testShowOneBook(): void
+    //   {
+    //       // This calls KernelTestCase::bootKernel(), and creates a
+    //       // "client" that is acting as the browser
+    //       $client = static::createClient();
 
-//       // Validate a successful response and some content
-//       $this->assertResponseIsSuccessful();
-//       $this->assertSelectorTextContains('table', 'The Hobbitses');
-//       $client->catchExceptions(false);
-//   }
+
+    //       // Request a specific page
+    //       $client->request('GET', '/library/show/1');
+
+    //       // Validate a successful response and some content
+    //       $this->assertResponseIsSuccessful();
+    //       $this->assertSelectorTextContains('table', 'The Hobbitses');
+    //       $client->catchExceptions(false);
+    //   }
 }

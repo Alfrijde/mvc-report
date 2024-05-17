@@ -16,6 +16,7 @@ use App\Card\CardGraphic;
 use App\Card\DeckOfCards;
 use App\Repository\BookRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Exception;
 
 ;
 

@@ -27,9 +27,9 @@ class BookFormType extends AbstractType
             ->add('submit', SubmitType::class)
         ;
     }
-/**
- * Sets the book type.
- */
+    /**
+     * Sets the book type.
+     */
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([

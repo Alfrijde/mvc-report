@@ -10,7 +10,6 @@ use Symfony\Component\Routing\Annotation\Route;
  * Test cases for class DiceGameController.
  */
 class CardGameControllerTest extends WebTestCase
-
 {
     /**
  * Tests if the show deck page is loading.
@@ -20,7 +19,7 @@ class CardGameControllerTest extends WebTestCase
         // This calls KernelTestCase::bootKernel(), and creates a
         // "client" that is acting as the browser
         $client = static::createClient();
-        
+
 
         // Request a specific page
         $client->request('GET', '/card/deck');
@@ -39,7 +38,7 @@ class CardGameControllerTest extends WebTestCase
         // This calls KernelTestCase::bootKernel(), and creates a
         // "client" that is acting as the browser
         $client = static::createClient();
-        
+
 
         // Request a specific page
         $client->request('GET', '/card/deck/shuffle');
