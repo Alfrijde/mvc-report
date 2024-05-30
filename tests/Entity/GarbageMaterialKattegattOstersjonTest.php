@@ -33,5 +33,15 @@ class GarbageMaterialKattegattOstersjonTest extends TestCase
 
     }
 
+    public function testGarbageMaterialKattegattOstersjonGetId()
+    {
+        $material = $this->createMock(GarbageMaterialKattegattOstersjon::class);
+
+        $material->method('getId')
+        ->willReturn(8);
+
+        $this->assertEquals(8, $material->getId());
+    }
+
 
 }

@@ -33,5 +33,15 @@ class GarbageBeachKattegattOstersjonTest extends TestCase
         $this->assertEquals(100, $garbage->getRuralBeach());
     }
 
+    public function testGarbageBeachKattegattOstersjonGetId()
+    {
+        $garbage = $this->createMock(GarbageBeachKattegattOstersjon::class);
+
+        $garbage->method('getId')
+        ->willReturn(7);
+
+        $this->assertEquals(7, $garbage->getId());
+    }
+
 
 }

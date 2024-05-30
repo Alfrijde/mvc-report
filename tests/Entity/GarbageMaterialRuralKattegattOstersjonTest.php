@@ -21,6 +21,7 @@ class GarbageMaterialRuralKattegattOstersjonTest extends TestCase
 
         $materialRepository = $this->createMock(ObjectRepository::class);
 
+
         $materialRepository->expects($this->any())
         ->method('find')
         ->willReturn($material);
@@ -31,6 +32,16 @@ class GarbageMaterialRuralKattegattOstersjonTest extends TestCase
         $this->assertEquals('Trä', $material->getMaterial());
         $this->assertEquals(12, $material->getPercentage());
 
+    }
+
+    public function testGarbageMaterialRuralKattegattOstersjonGetId()
+    {
+        $material = $this->createMock(GarbageMaterialRuralKattegattOstersjon::class);
+
+        $material->method('getId')
+        ->willReturn(10);
+
+        $this->assertEquals(10, $material->getId());
     }
 
 

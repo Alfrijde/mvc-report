@@ -9,8 +9,6 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\AbstractType;
 use Doctrine\Persistence\ManagerRegistry;
-use Symfony\UX\Chartjs\Builder\ChartBuilderInterface;
-use Symfony\UX\Chartjs\Model\Chart;
 use App\Entity\GarbageBeachKattegattOstersjon;
 use App\Form\BeachGarbageFormType;
 use App\Repository\GarbageBeachKattegattOstersjonRepository;
