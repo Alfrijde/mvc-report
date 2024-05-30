@@ -56,14 +56,7 @@
 <div id="chartContainer">
     <canvas id="myChart"></canvas>
   </div>
-  <p>Fördeling av material på urbana stränder 2023</p>
-  <div>
-    <canvas id="UrbanMatrialChart"></canvas>
-  </div>
-  <p>Fördeling av material på rurala stränder 2023</p>
-  <div>
-    <canvas id="RuralMatrialChart"></canvas>
-  </div>
+
 
   <p>Statestik från Håll Sverige rent via Sveriges miljömål.</p>
 
@@ -103,66 +96,6 @@
         }
       }
     });
-
-    var urbanMaterial = document.getElementById("UrbanMatrialChart").getContext("2d");
-    urbanMaterial.height = 600;
-
-    new Chart(urbanMaterial, {
-        type: 'pie',
-        data: {
-                labels: JSON.parse('{{ labelsUrban |json_encode|e("js") }}'),
-                datasets: [{
-                  label: 'Procent',
-                  data: JSON.parse('{{ datasetsUrban |json_encode|e("js") }}'),
-                  backgroundColor: [
-                    '#024959',
-                    '#011F26',
-                    '#026873',
-                    '#F2C185',
-                    '#BFAE99',
-                    '#027B73',
-                    '#F2EAD0',
-                    '#A6A59F',
-                    '#012E40',
-                    '#91B8B3'
-                  ],
-                  hoverOffset: 4
-                }]
-        },
-        options: {
-            aspectRatio: 2
-        }
-      });
-
-      var RuralMaterial = document.getElementById("RuralMatrialChart").getContext("2d");
-      urbanMaterial.height = 600;
-  
-      new Chart(RuralMaterial, {
-          type: 'pie',
-          data: {
-                  labels: JSON.parse('{{ labelsRural |json_encode|e("js") }}'),
-                  datasets: [{
-                    label: 'Procent',
-                    data: JSON.parse('{{ datasetsRural |json_encode|e("js") }}'),
-                    backgroundColor: [
-                        '#024959',
-                        '#011F26',
-                        '#026873',
-                        '#F2C185',
-                        '#BFAE99',
-                        '#027B73',
-                        '#F2EAD0',
-                        '#A6A59F',
-                        '#012E40',
-                        '#91B8B3'
-                    ],
-                    hoverOffset: 4
-                  }]
-          },
-          options: {
-              aspectRatio: 2
-          }
-        });
 
   </script>
 

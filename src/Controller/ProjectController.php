@@ -23,14 +23,6 @@ use App\Repository\GarbageMaterialRuralKattegattOstersjonRepository;
 
 class ProjectController extends AbstractController
 {
-    public function configureAssets(): Assets
-    {
-        $assets = parent::configureAssets();
-
-        $assets->addWebpackEncoreEntry('app');
-
-        return $assets;
-    }
     #[Route("/proj", name: "project")]
     public function showProject(): Response
     {
@@ -80,25 +72,17 @@ class ProjectController extends AbstractController
         ]);
     }
 
-        /**
-     * Route for showing all entries in the database.
+    /**
+     * Route for showing garbage of beach.
      */
 
      #[Route('/proj/show/garbage', name: 'project_show_garbage')]
-     public function showAllData(
+     public function showGarbage(
         GarbageBeachKattegattOstersjonRepository $garbageRepository,
-        GarbageMaterialKattegattOstersjonRepository $materialRepository,
-        GarbageMaterialRuralKattegattOstersjonRepository $materialRuralRepository,
-        ChartBuilderInterface $chartBuilder
+
      ): Response {
          $years = $garbageRepository
              ->findAll();
-
-        $materials = $materialRepository
-        ->findAll();
-        
-        $materialsRural = $materialRuralRepository
-        ->findAll();
 
         $labels = [];
         $datasets1 = [];
@@ -110,6 +94,31 @@ class ProjectController extends AbstractController
             $datasets2[] = $data->getRuralBeach();
         }
 
+         return $this->render('project/show_garbage.html.twig', [
+             'years' => $years,
+             'labels' => $labels,
+             'datasets1' => $datasets1,
+             'datasets2' => $datasets2,
+
+         ]);
+     }
+    /**
+     * Route for showing the material of the garbage.
+     */
+
+     #[Route('/proj/show/material', name: 'project_show_material')]
+     public function showMaterial(
+        GarbageMaterialKattegattOstersjonRepository $materialRepository,
+        GarbageMaterialRuralKattegattOstersjonRepository $materialRuralRepository
+     ): Response {
+
+
+        $materials = $materialRepository
+        ->findAll();
+        
+        $materialsRural = $materialRuralRepository
+        ->findAll();
+
         $labelsUrban = [];
         $datasetsUrban = [];
 
@@ -119,6 +128,9 @@ class ProjectController extends AbstractController
             
         }
 
+        $labelsRural = [];
+        $datasetsRural = [];
+
         foreach($materialsRural as $data){
             $labelsRural[] = $data->getMaterial();
             $datasetsRural[] = $data->getPercentage();
@@ -126,19 +138,13 @@ class ProjectController extends AbstractController
         }
 
  
-         return $this->render('project/show_garbage.html.twig', [
-             'years' => $years,
+         return $this->render('project/show_material.html.twig', [
              'materials' => $materials,
              'materialsRural' => $materialsRural,
-             'labels' => $labels,
-             'datasets1' => $datasets1,
-             'datasets2' => $datasets2,
              'labelsUrban' => $labelsUrban,
              'datasetsUrban' => $datasetsUrban,
              'labelsRural' => $labelsRural,
              'datasetsRural' => $datasetsRural
-
-
          ]);
      }
 }
