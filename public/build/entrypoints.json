@@ -8,6 +8,15 @@
       "css": [
         "build/app.a00d83ac.css"
       ]
+    },
+    "project": {
+      "js": [
+        "build/runtime.971a7ffe.js",
+        "build/project.3d8a0760.js"
+      ],
+      "css": [
+        "build/project.faff7aae.css"
+      ]
     }
   }
 }
