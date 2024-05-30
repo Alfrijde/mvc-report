@@ -23,22 +23,21 @@ use App\Repository\GarbageMaterialRuralKattegattOstersjonRepository;
 
 class ProjectController extends AbstractController
 {
+    /**
+     * Route for the homepage for the project.
+     */
     #[Route("/proj", name: "project")]
     public function showProject(): Response
     {
         return $this->render('project/start-project.html.twig');
     }
-
+/**
+ * Route that show information about the project.
+ */
     #[Route("/proj/about", name: "project_about")]
     public function aboutProject(): Response
     {
         return $this->render('project/about.html.twig');
-    }
-
-    #[Route("/sustainability", name: "sustainability")]
-    public function sustainability(): Response
-    {
-        return $this->render('project/start-project.html.twig');
     }
 
         /**
