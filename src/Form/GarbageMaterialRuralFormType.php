@@ -22,7 +22,7 @@ class GarbageMaterialRuralFormType extends AbstractType
             ->add('submit', SubmitType::class)
         ;
     }
-        /**
+    /**
      * Sets the class of the object created in the form.
      */
 

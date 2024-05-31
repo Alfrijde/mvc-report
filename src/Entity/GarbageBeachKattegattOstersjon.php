@@ -51,8 +51,8 @@ class GarbageBeachKattegattOstersjon
 
         return $this;
     }
-        /**
-     * Returns the urbanbeach of the object. The amount of 
+    /**
+     * Returns the urbanbeach of the object. The amount of
      * garabge collected from urban beaches on the coast of sweden.
      * @return int urbanBeach
      */
@@ -61,7 +61,7 @@ class GarbageBeachKattegattOstersjon
     {
         return $this->urbanBeach;
     }
-        /**
+    /**
      * Sets the UrbanBeach column of the object.
      * @return object
      */
@@ -73,7 +73,7 @@ class GarbageBeachKattegattOstersjon
         return $this;
     }
     /**
-     * Returns the ruralbeach of the object. The amount of 
+     * Returns the ruralbeach of the object. The amount of
      * garabge collected from rural beaches on the coast of sweden.
      * @return int ruralBeach
      */
@@ -82,7 +82,7 @@ class GarbageBeachKattegattOstersjon
     {
         return $this->ruralBeach;
     }
-        /**
+    /**
      * Sets the RuralBeach column of the object.
      * @return object
      */
