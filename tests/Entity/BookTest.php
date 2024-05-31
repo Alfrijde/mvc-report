@@ -35,5 +35,24 @@ class BookTest extends TestCase
 
     }
 
+    public function testBookGetId()
+    {
+        $book = $this->createMock(Book::class);
+
+        $book->method('getId')
+        ->willReturn(16);
+        
+        $bookRepository = $this->createMock(ObjectRepository::class);
+
+        $bookRepository->expects($this->any())
+        ->method('find')
+        ->willReturn($book);
+
+        $book = $bookRepository
+            ->find(1);
+
+        $this->assertEquals(16, $book->getId());
+    }
+
 
 }
