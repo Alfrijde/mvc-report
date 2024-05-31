@@ -165,7 +165,37 @@
 <p>Min TIL för det här kursmomentet är att jobba med phpmetrics och scrutinizer. Men också att skriva tester för Controllers som jag provade på litegrann
  i det här kursmomentet. Alla fungerade inte utom lokalt, men jag fick testa lite i alla fall.</p>
     <h2 id="kmom10">Kmom10</h2>
-    <p>Kmom10</p>
+    <h3>1.	Krav 1-3:</h3>
+    <p>Jag valde att göra projektet ” Visualisera indikatorer för hållbarhet”, då jag ville prova jobba lite mer med ORM och databaser på ett 
+        nytt sätt. Jag valde att göra tre tabeller i databasen som hade med nedskräpning på stränder att göra. Jag valde att göra genererade 
+        formulär i webbsidan för att stoppa in data i databasen, då jag tyckte det var ett lätt sätt och kul sätt att jobba med databasen. 
+        Den routen är nu utkommenterad så ingen ska kunna lägga in mer information i databasen men den finns under router ifall man vill 
+        uppdatera tabellerna. </p>
+        <p>Datan från databasen är sedan visualiserad med chart.js i webbsidan i stapel och cirkeldiagram. Min data hämtade jag via 
+            Sveriges miljömål som hämtade sin data från Håll Sverige rent. Jag valde att göra två sidor med information och diagram, 
+            en mer generell och marint skräp och en som gick in närmare på typen av skräp på stränderna.</p>
+        <p>Det nya utseendet på webbsidan skapas med ett egen build ”app”. Det globala målet jag valde fick bli temat på hemsidan. 
+            Fonten heter ”seaweed script”, jag tyckte det passade bra. Alla färger är tagna från bakgrunden med Adobe color-verktyget.</p>
+        <p>Jag nådde precis inte upp till 90 % kodtäckning på mina entites. Jag lyckades inte göra ett test på getId() som scrutinizer 
+            ville kännas vid. Men med phpunit så testas de i alla fall. De andra klasserna från kursen ligger på 100%. Alla klasser är 
+            minst gula i metrics, och jag har jobbat med kommentering för att underlätta underhåll av klasserna.</p>
+        <h3>2.</h3>
+            <p>2.	De större delarna av projektet gick bra att jämföra. Jag tycker det blev lättare att arbeta med ORM och det var
+                 kul att göra nya entites och skapa formulär och tester för dem. Det största problemet jag hade var att få till diagrammen
+                  i webbsidan. Jag försökte köra chart.js via symfony UX. Det gick inte alls och jag satt nog totalt närmare en dag för 
+                  att försöka få till det. Jag om installerade och installerade nya program och tillägg för att försöka få det att fungera
+                   men det var något med renderingen på sidan som inte ville fungera. Till slut fick jag ge upp och Chart.js ligger nu direkt
+                    i twig-filen i ett script. Snygga tabeller blev det till slut i alla fall. Chart.js var lätt att arbeta med för att få 
+                    till snygga tabeller när jag väl fick dem att renderas. </p>
+        <p>Jag tycker det var ett bra projekt för kursen och att man kunde välja inriktning. Jag kände mig ganska nöjd med kortspelen och
+             öva mer på ORM så då valde jag det. </p>
+        <h3>3.</h3>
+        <p>3.	Jag tycker det har varit en rolig men klurig kurs. Det har varit mycket att hålla reda på med olika builds, metrics och tester
+             och grejer. Men det har känts som en nyttig kurs och som att jag har lärt mig många bar saker. </p>
+            <p>Även om jag ibland känt att jag inte har hängt med riktigt så har kursmaterialet alltid varit tydligt och jag har kunnat
+                 gå tillbaka och läsa på om det är något jag inte har förstått. Det känns som ett ämne man måste jobba med ett tag för 
+                 att förstå ordentligt. Jag ger kursen 7/10, men det är mest för jag tyckte det var svårt ibland och att det ibland gick
+                  lite för snabbt för mig. Jag skulle rekommendera kursen som en fortsättningskurs om man har läst php tidigare.</p>
 </div>
 
 {% endblock %}

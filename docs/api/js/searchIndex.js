@@ -378,27 +378,27 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Controller\\Report\u003A\u003AshowMe\u0028\u0029",
             "name": "showMe",
-            "summary": "",
+            "summary": "Route\u0020for\u0020the\u0020homepage.",
             "url": "classes/App-Controller-Report.html#method_showMe"
         },                {
             "fqsen": "\\App\\Controller\\Report\u003A\u003Ahome\u0028\u0029",
             "name": "home",
-            "summary": "",
+            "summary": "Route\u0020for\u0020the\u0020about\u002Dpage.",
             "url": "classes/App-Controller-Report.html#method_home"
         },                {
             "fqsen": "\\App\\Controller\\Report\u003A\u003Aabout\u0028\u0029",
             "name": "about",
-            "summary": "",
+            "summary": "Route\u0020for\u0020all\u0020written\u0020reports.",
             "url": "classes/App-Controller-Report.html#method_about"
         },                {
             "fqsen": "\\App\\Controller\\Report\u003A\u003Anumber\u0028\u0029",
             "name": "number",
-            "summary": "",
+            "summary": "Route\u0020for\u0020lucky\u0020number.",
             "url": "classes/App-Controller-Report.html#method_number"
         },                {
             "fqsen": "\\App\\Controller\\Report\u003A\u003Ametrics\u0028\u0029",
             "name": "metrics",
-            "summary": "",
+            "summary": "For\u0020a\u0020metrics\u0020analyzis.",
             "url": "classes/App-Controller-Report.html#method_metrics"
         },                {
             "fqsen": "\\App\\Dice\\Dice",
@@ -573,37 +573,37 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Entity\\GarbageBeachKattegattOstersjon\u003A\u003AgetId\u0028\u0029",
             "name": "getId",
-            "summary": "",
+            "summary": "Returns\u0020the\u0020Id\u0020of\u0020the\u0020object.",
             "url": "classes/App-Entity-GarbageBeachKattegattOstersjon.html#method_getId"
         },                {
             "fqsen": "\\App\\Entity\\GarbageBeachKattegattOstersjon\u003A\u003AgetYear\u0028\u0029",
             "name": "getYear",
-            "summary": "",
+            "summary": "Returns\u0020the\u0020Year\u0020of\u0020the\u0020object.",
             "url": "classes/App-Entity-GarbageBeachKattegattOstersjon.html#method_getYear"
         },                {
             "fqsen": "\\App\\Entity\\GarbageBeachKattegattOstersjon\u003A\u003AsetYear\u0028\u0029",
             "name": "setYear",
-            "summary": "",
+            "summary": "Sets\u0020the\u0020Year\u0020of\u0020the\u0020object.",
             "url": "classes/App-Entity-GarbageBeachKattegattOstersjon.html#method_setYear"
         },                {
             "fqsen": "\\App\\Entity\\GarbageBeachKattegattOstersjon\u003A\u003AgetUrbanBeach\u0028\u0029",
             "name": "getUrbanBeach",
-            "summary": "",
+            "summary": "Returns\u0020the\u0020urbanbeach\u0020of\u0020the\u0020object.\u0020The\u0020amount\u0020of\ngarabge\u0020collected\u0020from\u0020urban\u0020beaches\u0020on\u0020the\u0020coast\u0020of\u0020sweden.",
             "url": "classes/App-Entity-GarbageBeachKattegattOstersjon.html#method_getUrbanBeach"
         },                {
             "fqsen": "\\App\\Entity\\GarbageBeachKattegattOstersjon\u003A\u003AsetUrbanBeach\u0028\u0029",
             "name": "setUrbanBeach",
-            "summary": "",
+            "summary": "Sets\u0020the\u0020UrbanBeach\u0020column\u0020of\u0020the\u0020object.",
             "url": "classes/App-Entity-GarbageBeachKattegattOstersjon.html#method_setUrbanBeach"
         },                {
             "fqsen": "\\App\\Entity\\GarbageBeachKattegattOstersjon\u003A\u003AgetRuralBeach\u0028\u0029",
             "name": "getRuralBeach",
-            "summary": "",
+            "summary": "Returns\u0020the\u0020ruralbeach\u0020of\u0020the\u0020object.\u0020The\u0020amount\u0020of\ngarabge\u0020collected\u0020from\u0020rural\u0020beaches\u0020on\u0020the\u0020coast\u0020of\u0020sweden.",
             "url": "classes/App-Entity-GarbageBeachKattegattOstersjon.html#method_getRuralBeach"
         },                {
             "fqsen": "\\App\\Entity\\GarbageBeachKattegattOstersjon\u003A\u003AsetRuralBeach\u0028\u0029",
             "name": "setRuralBeach",
-            "summary": "",
+            "summary": "Sets\u0020the\u0020RuralBeach\u0020column\u0020of\u0020the\u0020object.",
             "url": "classes/App-Entity-GarbageBeachKattegattOstersjon.html#method_setRuralBeach"
         },                {
             "fqsen": "\\App\\Entity\\GarbageBeachKattegattOstersjon\u003A\u003A\u0024id",
@@ -723,12 +723,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Form\\BeachGarbageFormType\u003A\u003AbuildForm\u0028\u0029",
             "name": "buildForm",
-            "summary": "",
+            "summary": "Builds\u0020the\u0020form\u0020with\u0020the\u0020specified\u0020fields.",
             "url": "classes/App-Form-BeachGarbageFormType.html#method_buildForm"
         },                {
             "fqsen": "\\App\\Form\\BeachGarbageFormType\u003A\u003AconfigureOptions\u0028\u0029",
             "name": "configureOptions",
-            "summary": "",
+            "summary": "Sets\u0020the\u0020class\u0020of\u0020the\u0020object\u0020created\u0020in\u0020the\u0020form.",
             "url": "classes/App-Form-BeachGarbageFormType.html#method_configureOptions"
         },                {
             "fqsen": "\\App\\Form\\BookFormType",
@@ -753,12 +753,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Form\\GarbageMaterialFormType\u003A\u003AbuildForm\u0028\u0029",
             "name": "buildForm",
-            "summary": "",
+            "summary": "Builds\u0020the\u0020form\u0020with\u0020the\u0020specified\u0020fields.",
             "url": "classes/App-Form-GarbageMaterialFormType.html#method_buildForm"
         },                {
             "fqsen": "\\App\\Form\\GarbageMaterialFormType\u003A\u003AconfigureOptions\u0028\u0029",
             "name": "configureOptions",
-            "summary": "",
+            "summary": "Sets\u0020the\u0020class\u0020of\u0020the\u0020object\u0020created\u0020in\u0020the\u0020form.",
             "url": "classes/App-Form-GarbageMaterialFormType.html#method_configureOptions"
         },                {
             "fqsen": "\\App\\Form\\GarbageMaterialRuralFormType",
@@ -768,12 +768,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Form\\GarbageMaterialRuralFormType\u003A\u003AbuildForm\u0028\u0029",
             "name": "buildForm",
-            "summary": "",
+            "summary": "Builds\u0020the\u0020form\u0020with\u0020the\u0020specified\u0020fields.",
             "url": "classes/App-Form-GarbageMaterialRuralFormType.html#method_buildForm"
         },                {
             "fqsen": "\\App\\Form\\GarbageMaterialRuralFormType\u003A\u003AconfigureOptions\u0028\u0029",
             "name": "configureOptions",
-            "summary": "",
+            "summary": "Sets\u0020the\u0020class\u0020of\u0020the\u0020object\u0020created\u0020in\u0020the\u0020form.",
             "url": "classes/App-Form-GarbageMaterialRuralFormType.html#method_configureOptions"
         },                {
             "fqsen": "\\App\\Kernel",

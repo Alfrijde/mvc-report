@@ -44,33 +44,33 @@ class ProjectController extends AbstractController
     /**
      * Route for adding info to the database.
      */
-    #[Route('/proj/add', name: 'project_add')]
-    public function createEnrty(
-        ManagerRegistry $doctrine,
-        Request $request
-    ): Response {
-        $material = new GarbageMaterialRuralKattegattOstersjon();
+    // #[Route('/proj/add', name: 'project_add')]
+    // public function createEnrty(
+    //     ManagerRegistry $doctrine,
+    //     Request $request
+    // ): Response {
+    //     $material = new GarbageMaterialRuralKattegattOstersjon();
 
-        $form = $this->createForm(GarbageMaterialRuralFormType::class, $material);
+    //     $form = $this->createForm(GarbageMaterialRuralFormType::class, $material);
 
-        $form->handleRequest($request);
+    //     $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $entityManager = $doctrine->getManager();
+    //     if ($form->isSubmitted() && $form->isValid()) {
+    //         $entityManager = $doctrine->getManager();
 
 
-            $entityManager->persist($material);
+    //         $entityManager->persist($material);
 
-            // actually executes the queries (i.e. the INSERT query)
-            $entityManager->flush();
+    //         // actually executes the queries (i.e. the INSERT query)
+    //         $entityManager->flush();
 
-            return $this->redirectToRoute('project_add');
-        }
+    //         return $this->redirectToRoute('project_add');
+    //     }
 
-        return $this->render('project/add.html.twig', [
-            'form' => $form,
-        ]);
-    }
+    //     return $this->render('project/add.html.twig', [
+    //         'form' => $form,
+    //     ]);
+    // }
 
     /**
      * Route for showing garbage of beach.
