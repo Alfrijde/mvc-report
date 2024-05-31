@@ -11,6 +11,9 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 class GarbageMaterialFormType extends AbstractType
 {
+    /**
+     * Builds the form with the specified fields.
+     */
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
@@ -19,6 +22,9 @@ class GarbageMaterialFormType extends AbstractType
             ->add('submit', SubmitType::class)
         ;
     }
+        /**
+     * Sets the class of the object created in the form.
+     */
 
     public function configureOptions(OptionsResolver $resolver): void
     {

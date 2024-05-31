@@ -4,64 +4,43 @@
 
 {% block body %}
 <div class="main">
+<h2>Skräp på stränder</h2>
+
+<p>Följande tabell bygger på mätningar som görs av Håll Sverige rent. De utför mätningar av skräp på stränder
+  runt Sveriges kust tre gånger om året. Jag har valt att fokusera på mätningarna från Östersjön och Kattegatt. Nedanstående siffor är ett genomsnitt av upplockat skräp under ett år. Skräpet kommer från olika sorters stränder, 
+ stadsnära stränder (urbana) och oexploaterade (rurala). På de stadsnära stränderna beräknas skräpet både komma från hav och land, det vill säga besökare 
+ på stranden. På de oexploaterade stränderna räknas skräpet komma främst från havet. Mätningarna kan vara känsliga och resultatet kan bero på utomstående påverkningar som 
+ väder eller andra stora händelser i närheten.  På det stadsnära stränderna kan det vara svårt att veta om skräpet kommer från land eller hav. </p>
+ <p>De tio stränderna som mätningarna gjorts på är:</p>
+ <ul>
+     <li>Sudde strand, Varbergs kommun (oexploaterad)</li>
+     <li>Järavallen, Kävlinge kommun (oexploaterad)</li>
+     <li>Nybrostrand, Ystads kommun (stadsnära)</li>
+     <li>Mälarhusen, Simrishamns kommun (stadsnära)</li>
+     <li>Kårehamn strand, Borgholms kommun (oexploaterad)</li>
+     <li>Tofta, Region Gotland (stadsnära)</li>
+     <li>Sjauster, Region Gotland (oexploaterad)</li>
+     <li>Nåttarö, Haninge kommun (oexploaterad)</li>
+     <li>Rullsand, Älvkarleby kommun (stadsnära)</li>
+     <li>Storsand, Skellefteå kommun (oexploaterad)</li>
+ </ul>
+<p> Diagrammet visar nedskräpning på stränder kring Kattegatt och Östersjöns kust. Man kan se en minskning av nedskräpning på de stadsnära stränderna. Förhoppningsvis 
+ är det en ökad medvetenhet hos ständernas besökare som har lätt till minskningen och att det kommer fortsätta sjunka. Tyvärr ser man en ökning i nedskräpning på de 
+ oexploaterade stränderna och ökningen har främst skett på stränderna kring södra Sverige och Kattegatt. Kanske har nedskräpningen ökat någon annanstans och skräpet 
+ förs via strömmar och hamnar på stränderna.</p>
 
 
-{# <table>
-    <tr>
-        <td>År</td>
-        <td>Urbana stränder</td>
-        <td>Rurala stränder</td>
-    </tr>
-{% for year in years %}
-<tr>
-<td>{{ year.year }}</td>
-<td>{{ year.urbanBeach }}</td>
-<td>{{ year.ruralBeach }}</td>
-</tr>
-{% endfor %}
-</table> #}
-
-
-{# <table>
-    <tr>
-        <td>Material</td>
-        <td>Procent</td>
-
-    </tr>
-{% for material in materials %}
-<tr>
-<td>{{ material.material }}</td>
-<td>{{ material.percentage }}</td>
-
-</tr>
-{% endfor %}
-</table> #}
-
-
-{# <table>
-    <tr>
-        <td>Material</td>
-        <td>Procent</td>
-
-    </tr>
-{% for material in materialsRural %}
-<tr>
-<td>{{ material.material }}</td>
-<td>{{ material.percentage }}</td>
-
-</tr>
-{% endfor %}
-</table> #}
-<p>Antal skräp/100m på stränder </p>
+<h3>Antal skräp/100m på stränder </h3>
 <div id="chartContainer">
     <canvas id="myChart"></canvas>
   </div>
 
 
-  <p>Statestik från Håll Sverige rent via Sveriges miljömål.</p>
+  <p><span class="img-text">Statistik från Håll Sverige rent via Sveriges miljömål. Källa Sveriges miljömål.</span></p>
 
-  
-  <script>
+</div>
+
+<script>
 
     document.getElementById("chartContainer").innerHTML = '&nbsp;';
     document.getElementById("chartContainer").innerHTML = '<canvas id="myChart"></canvas>';
@@ -98,8 +77,4 @@
     });
 
   </script>
-
-
-</div>
-</div>
 {% endblock %}

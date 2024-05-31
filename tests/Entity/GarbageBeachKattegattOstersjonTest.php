@@ -11,6 +11,9 @@ use Doctrine\Persistence\ObjectRepository;
  */
 class GarbageBeachKattegattOstersjonTest extends TestCase
 {
+    /**
+     * Tests the creation of the object.
+     */
     public function testGarbageBeachKattegattOstersjon()
     {
         $garbage = new GarbageBeachKattegattOstersjon();
@@ -32,7 +35,9 @@ class GarbageBeachKattegattOstersjonTest extends TestCase
         $this->assertEquals(200, $garbage->getUrbanBeach());
         $this->assertEquals(100, $garbage->getRuralBeach());
     }
-
+    /**
+    * Tests the getId function in the class.
+    */
     public function testGarbageBeachKattegattOstersjonGetId()
     {
         $garbage = $this->createMock(GarbageBeachKattegattOstersjon::class);

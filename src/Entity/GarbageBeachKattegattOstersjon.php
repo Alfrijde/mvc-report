@@ -21,16 +21,29 @@ class GarbageBeachKattegattOstersjon
 
     #[ORM\Column]
     private ?int $ruralBeach = null;
+    /**
+     * Returns the Id of the object.
+     * @return int Id
+     */
 
     public function getId(): ?int
     {
         return $this->id;
     }
+    /**
+     * Returns the Year of the object.
+     * @return int Year
+     */
 
     public function getYear(): ?int
     {
         return $this->year;
     }
+
+    /**
+     * Sets the Year of the object.
+     * @return object
+     */
 
     public function setYear(int $year): static
     {
@@ -38,11 +51,20 @@ class GarbageBeachKattegattOstersjon
 
         return $this;
     }
+        /**
+     * Returns the urbanbeach of the object. The amount of 
+     * garabge collected from urban beaches on the coast of sweden.
+     * @return int urbanBeach
+     */
 
     public function getUrbanBeach(): ?int
     {
         return $this->urbanBeach;
     }
+        /**
+     * Sets the UrbanBeach column of the object.
+     * @return object
+     */
 
     public function setUrbanBeach(int $urbanBeach): static
     {
@@ -50,11 +72,20 @@ class GarbageBeachKattegattOstersjon
 
         return $this;
     }
+    /**
+     * Returns the ruralbeach of the object. The amount of 
+     * garabge collected from rural beaches on the coast of sweden.
+     * @return int ruralBeach
+     */
 
     public function getRuralBeach(): ?int
     {
         return $this->ruralBeach;
     }
+        /**
+     * Sets the RuralBeach column of the object.
+     * @return object
+     */
 
     public function setRuralBeach(int $ruralBeach): static
     {

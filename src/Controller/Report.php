@@ -1,4 +1,7 @@
 <?php
+/**
+ * Controller for the basic part of the website.
+ */
 
 namespace App\Controller;
 
@@ -14,6 +17,9 @@ use App\Card\CardHand;
 
 class Report extends AbstractController
 {
+    /**
+     * Route for the homepage.
+     */
     #[Route("/", name: "me")]
     public function showMe(): Response
     {
@@ -21,18 +27,27 @@ class Report extends AbstractController
 
         return $this->render('me.html.twig');
     }
+    /**
+     * Route for the about-page.
+     */
 
     #[Route("/about", name: "about")]
     public function home(): Response
     {
         return $this->render('about.html.twig');
     }
+    /**
+     * Route for all written reports.
+     */
 
     #[Route("/report", name: "report")]
     public function about(): Response
     {
         return $this->render('report.html.twig');
     }
+    /**
+     * Route for lucky number.
+     */
 
     #[Route("/lucky", name: "lucky")]
     public function number(): Response
@@ -45,6 +60,9 @@ class Report extends AbstractController
 
         return $this->render('lucky.html.twig', $data);
     }
+    /**
+     * For a metrics analyzis.
+     */
 
     #[Route("/metrics", name: "metrics")]
     public function metrics(): Response

@@ -128,23 +128,53 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Controller\\ApiCard\u003A\u003AapiDeck\u0028\u0029",
             "name": "apiDeck",
-            "summary": "",
+            "summary": "Shows\u0020a\u0020sorted\u0020card\u0020deck\u0020in\u0020Json.",
             "url": "classes/App-Controller-ApiCard.html#method_apiDeck"
         },                {
             "fqsen": "\\App\\Controller\\ApiCard\u003A\u003AapiShuffle\u0028\u0029",
             "name": "apiShuffle",
-            "summary": "",
+            "summary": "Shows\u0020a\u0020shuffled\u0020card\u0020deck\u0020in\u0020Json.",
             "url": "classes/App-Controller-ApiCard.html#method_apiShuffle"
         },                {
             "fqsen": "\\App\\Controller\\ApiCard\u003A\u003AdrawCard\u0028\u0029",
             "name": "drawCard",
-            "summary": "",
+            "summary": "Draws\u0020a\u0020number\u0020of\u0020cards\u0020and\u0020shows\u0020them\u0020and\u0020how\u0020many\u0020cards\u0020are\u0020left\u0020in\u0020the\u0020deck\u0020in\u0020a\u0020json\u0020format.",
             "url": "classes/App-Controller-ApiCard.html#method_drawCard"
         },                {
             "fqsen": "\\App\\Controller\\ApiCard\u003A\u003AdrawOne\u0028\u0029",
             "name": "drawOne",
-            "summary": "",
+            "summary": "Draws\u0020one\u0020and\u0020shows\u0020them\u0020it\u0020how\u0020many\u0020cards\u0020are\u0020left\u0020in\u0020the\u0020deck\u0020in\u0020a\u0020json\u0020format.",
             "url": "classes/App-Controller-ApiCard.html#method_drawOne"
+        },                {
+            "fqsen": "\\App\\Controller\\ApiCard\u003A\u003AshowAllBooks\u0028\u0029",
+            "name": "showAllBooks",
+            "summary": "Shows\u0020all\u0020books\u0020in\u0020the\u0020library\u0020in\u0020a\u0020json\u0020format.",
+            "url": "classes/App-Controller-ApiCard.html#method_showAllBooks"
+        },                {
+            "fqsen": "\\App\\Controller\\ApiCard\u003A\u003AshowDetails\u0028\u0029",
+            "name": "showDetails",
+            "summary": "Shows\u0020one\u0020book\u0020based\u0020on\u0020the\u0020isbn\u0020in\u0020a\u0020json\u0020format.",
+            "url": "classes/App-Controller-ApiCard.html#method_showDetails"
+        },                {
+            "fqsen": "\\App\\Controller\\ApiController",
+            "name": "ApiController",
+            "summary": "",
+            "url": "classes/App-Controller-ApiController.html"
+        },                {
+            "fqsen": "\\App\\Controller\\ApiController\u003A\u003Aapi\u0028\u0029",
+            "name": "api",
+            "summary": "",
+            "url": "classes/App-Controller-ApiController.html#method_api"
+        },                {
+            "fqsen": "\\App\\Controller\\ApiController\u003A\u003AjsonQuote\u0028\u0029",
+            "name": "jsonQuote",
+            "summary": "",
+            "url": "classes/App-Controller-ApiController.html#method_jsonQuote"
+        },                {
+            "fqsen": "\\App\\Controller\\ApiController\u003A\u003AjsonGame\u0028\u0029",
+            "name": "jsonGame",
+            "summary": "",
+            "url": "classes/App-Controller-ApiController.html#method_jsonGame"
         },                {
             "fqsen": "\\App\\Controller\\CardGameController",
             "name": "CardGameController",
@@ -153,17 +183,17 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Controller\\CardGameController\u003A\u003Asession\u0028\u0029",
             "name": "session",
-            "summary": "",
+            "summary": "Shows\u0020the\u0020current\u0020session.",
             "url": "classes/App-Controller-CardGameController.html#method_session"
         },                {
             "fqsen": "\\App\\Controller\\CardGameController\u003A\u003AsessionDelete\u0028\u0029",
             "name": "sessionDelete",
-            "summary": "",
+            "summary": "Deletes\u0020the\u0020session.",
             "url": "classes/App-Controller-CardGameController.html#method_sessionDelete"
         },                {
             "fqsen": "\\App\\Controller\\CardGameController\u003A\u003Ainit\u0028\u0029",
             "name": "init",
-            "summary": "",
+            "summary": "Initates\u0020the\u0020card\u0020game.",
             "url": "classes/App-Controller-CardGameController.html#method_init"
         },                {
             "fqsen": "\\App\\Controller\\CardGameController\u003A\u003AshowDeck\u0028\u0029",
@@ -173,17 +203,17 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Controller\\CardGameController\u003A\u003AshuffleDeck\u0028\u0029",
             "name": "shuffleDeck",
-            "summary": "",
+            "summary": "Shuffles\u0020the\u0020card\u0020deck.",
             "url": "classes/App-Controller-CardGameController.html#method_shuffleDeck"
         },                {
             "fqsen": "\\App\\Controller\\CardGameController\u003A\u003AdrawCard\u0028\u0029",
             "name": "drawCard",
-            "summary": "",
+            "summary": "Draws\u0020the\u0020specified\u0020number\u0020of\u0020cards\u0020from\u0020the\u0020deck.",
             "url": "classes/App-Controller-CardGameController.html#method_drawCard"
         },                {
             "fqsen": "\\App\\Controller\\CardGameController\u003A\u003AdrawOne\u0028\u0029",
             "name": "drawOne",
-            "summary": "",
+            "summary": "Draws\u0020one\u0020card\u0020from\u0020the\u0020deck.",
             "url": "classes/App-Controller-CardGameController.html#method_drawOne"
         },                {
             "fqsen": "\\App\\Controller\\DiceGameController",
@@ -193,47 +223,47 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Controller\\DiceGameController\u003A\u003Ahome\u0028\u0029",
             "name": "home",
-            "summary": "",
+            "summary": "Creates\u0020the\u0020homepage\u0020for\u0020the\u0020pig\u0020game.",
             "url": "classes/App-Controller-DiceGameController.html#method_home"
         },                {
             "fqsen": "\\App\\Controller\\DiceGameController\u003A\u003AtestRollDice\u0028\u0029",
             "name": "testRollDice",
-            "summary": "",
+            "summary": "Test\u0020the\u0020roll\u0020method\u0020on\u0020one\u0020dice.",
             "url": "classes/App-Controller-DiceGameController.html#method_testRollDice"
         },                {
             "fqsen": "\\App\\Controller\\DiceGameController\u003A\u003AtestRollDices\u0028\u0029",
             "name": "testRollDices",
-            "summary": "",
+            "summary": "Tests\u0020to\u0020roll\u0020multiple\u0020dice,\u0020determined\u0020by\u0020the\u0020url.",
             "url": "classes/App-Controller-DiceGameController.html#method_testRollDices"
         },                {
             "fqsen": "\\App\\Controller\\DiceGameController\u003A\u003AtestDiceHand\u0028\u0029",
             "name": "testDiceHand",
-            "summary": "",
+            "summary": "Creates\u0020a\u0020DiceHand\u0020and\u0020rolls\u0020the\u0020die\u0020in\u0020the\u0020hand.",
             "url": "classes/App-Controller-DiceGameController.html#method_testDiceHand"
         },                {
             "fqsen": "\\App\\Controller\\DiceGameController\u003A\u003Ainit\u0028\u0029",
             "name": "init",
-            "summary": "",
+            "summary": "Initiates\u0020the\u0020pig\u0020game.",
             "url": "classes/App-Controller-DiceGameController.html#method_init"
         },                {
             "fqsen": "\\App\\Controller\\DiceGameController\u003A\u003AinitCallback\u0028\u0029",
             "name": "initCallback",
-            "summary": "",
+            "summary": "Creates\u0020the\u0020players\u0020dicehand\u0020an\u0020preps\u0020the\u0020die\u0020and\u0020saves\u0020it\u0020all\u0020to\u0020the\u0020session.",
             "url": "classes/App-Controller-DiceGameController.html#method_initCallback"
         },                {
             "fqsen": "\\App\\Controller\\DiceGameController\u003A\u003Aplay\u0028\u0029",
             "name": "play",
-            "summary": "",
+            "summary": "The\u0020play\u002Dpart\u0020of\u0020the\u0020game.",
             "url": "classes/App-Controller-DiceGameController.html#method_play"
         },                {
             "fqsen": "\\App\\Controller\\DiceGameController\u003A\u003Aroll\u0028\u0029",
             "name": "roll",
-            "summary": "",
+            "summary": "The\u0020roll\u0020mecanism\u0020in\u0020the\u0020game\u0020that\u0020rolls\u0020the\u0020dice\u0020and\u0020controlls\u0020the\u0020rounds.",
             "url": "classes/App-Controller-DiceGameController.html#method_roll"
         },                {
             "fqsen": "\\App\\Controller\\DiceGameController\u003A\u003Asave\u0028\u0029",
             "name": "save",
-            "summary": "",
+            "summary": "Saves\u0020the\u0020points\u0020to\u0020the\u0020session",
             "url": "classes/App-Controller-DiceGameController.html#method_save"
         },                {
             "fqsen": "\\App\\Controller\\GameController",
@@ -243,33 +273,103 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Controller\\GameController\u003A\u003Adoc\u0028\u0029",
             "name": "doc",
-            "summary": "",
+            "summary": "Shows\u0020the\u0020rules\u0020to\u0020the\u0020game\u0020and\u0020is\u0020the\u0020games\u0020homepage.",
             "url": "classes/App-Controller-GameController.html#method_doc"
         },                {
             "fqsen": "\\App\\Controller\\GameController\u003A\u003Ainit\u0028\u0029",
             "name": "init",
-            "summary": "",
+            "summary": "Initiates\u0020the\u0020game\u0020and\u0020saves\u0020the\u0020deck\u0020and\u0020the\u0020cardhands\u0020to\u0020the\u0020session.",
             "url": "classes/App-Controller-GameController.html#method_init"
         },                {
             "fqsen": "\\App\\Controller\\GameController\u003A\u003Aplay\u0028\u0029",
             "name": "play",
-            "summary": "",
+            "summary": "The\u0020play\u0020part\u0020of\u0020the\u0020game.",
             "url": "classes/App-Controller-GameController.html#method_play"
         },                {
             "fqsen": "\\App\\Controller\\GameController\u003A\u003Adraw\u0028\u0029",
             "name": "draw",
-            "summary": "",
+            "summary": "Draws\u0020a\u0020card\u0020from\u0020the\u0020deck\u0020and\u0020saves\u0020iit\u0020to\u0020the\u0020card\u0020hand.",
             "url": "classes/App-Controller-GameController.html#method_draw"
         },                {
             "fqsen": "\\App\\Controller\\GameController\u003A\u003Abank\u0028\u0029",
             "name": "bank",
-            "summary": "",
+            "summary": "This\u0020route\u0020manages\u0020the\u0020bank\u0020player\u0020of\u0020the\u0020game.",
             "url": "classes/App-Controller-GameController.html#method_bank"
         },                {
             "fqsen": "\\App\\Controller\\GameController\u003A\u003Aend\u0028\u0029",
             "name": "end",
-            "summary": "",
+            "summary": "Sums\u0020up\u0020the\u0020game\u0020and\u0020all\u0020scores.",
             "url": "classes/App-Controller-GameController.html#method_end"
+        },                {
+            "fqsen": "\\App\\Controller\\LibraryController",
+            "name": "LibraryController",
+            "summary": "",
+            "url": "classes/App-Controller-LibraryController.html"
+        },                {
+            "fqsen": "\\App\\Controller\\LibraryController\u003A\u003Aindex\u0028\u0029",
+            "name": "index",
+            "summary": "Home\u0020page\u0020for\u0020the\u0020library.",
+            "url": "classes/App-Controller-LibraryController.html#method_index"
+        },                {
+            "fqsen": "\\App\\Controller\\LibraryController\u003A\u003AcreateBook\u0028\u0029",
+            "name": "createBook",
+            "summary": "Route\u0020for\u0020adding\u0020a\u0020book\u0020to\u0020the\u0020library.",
+            "url": "classes/App-Controller-LibraryController.html#method_createBook"
+        },                {
+            "fqsen": "\\App\\Controller\\LibraryController\u003A\u003AshowAllBooks\u0028\u0029",
+            "name": "showAllBooks",
+            "summary": "Route\u0020for\u0020showing\u0020all\u0020the\u0020books\u0020in\u0020the\u0020library.",
+            "url": "classes/App-Controller-LibraryController.html#method_showAllBooks"
+        },                {
+            "fqsen": "\\App\\Controller\\LibraryController\u003A\u003AshowDetails\u0028\u0029",
+            "name": "showDetails",
+            "summary": "Shows\u0020one\u0020book\u0020by\u0020the\u0020ida\u0020in\u0020the\u0020url.",
+            "url": "classes/App-Controller-LibraryController.html#method_showDetails"
+        },                {
+            "fqsen": "\\App\\Controller\\LibraryController\u003A\u003AdeleteBookById\u0028\u0029",
+            "name": "deleteBookById",
+            "summary": "Deletes\u0020a\u0020book\u0020from\u0020the\u0020library\u0020by\u0020the\u0020id\u0020in\u0020the\u0020url.",
+            "url": "classes/App-Controller-LibraryController.html#method_deleteBookById"
+        },                {
+            "fqsen": "\\App\\Controller\\LibraryController\u003A\u003AupdateBook\u0028\u0029",
+            "name": "updateBook",
+            "summary": "Updates\u0020the\u0020information\u0020on\u0020the\u0020book\u0020specified\u0020by\u0020the\u0020id\u0020in\u0020the\u0020url.",
+            "url": "classes/App-Controller-LibraryController.html#method_updateBook"
+        },                {
+            "fqsen": "\\App\\Controller\\LibraryController\u003A\u003AupdateBookProcess\u0028\u0029",
+            "name": "updateBookProcess",
+            "summary": "The\u0020updating\u0020process\u0020for\u0020the\u0020book\u0020specified\u0020by\u0020id\u0020in\u0020the\u0020url.",
+            "url": "classes/App-Controller-LibraryController.html#method_updateBookProcess"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController",
+            "name": "ProjectController",
+            "summary": "",
+            "url": "classes/App-Controller-ProjectController.html"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003AshowProject\u0028\u0029",
+            "name": "showProject",
+            "summary": "Route\u0020for\u0020the\u0020homepage\u0020for\u0020the\u0020project.",
+            "url": "classes/App-Controller-ProjectController.html#method_showProject"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003AaboutProject\u0028\u0029",
+            "name": "aboutProject",
+            "summary": "Route\u0020that\u0020show\u0020information\u0020about\u0020the\u0020project.",
+            "url": "classes/App-Controller-ProjectController.html#method_aboutProject"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003AcreateEnrty\u0028\u0029",
+            "name": "createEnrty",
+            "summary": "Route\u0020for\u0020adding\u0020info\u0020to\u0020the\u0020database.",
+            "url": "classes/App-Controller-ProjectController.html#method_createEnrty"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003AshowGarbage\u0028\u0029",
+            "name": "showGarbage",
+            "summary": "Route\u0020for\u0020showing\u0020garbage\u0020of\u0020beach.",
+            "url": "classes/App-Controller-ProjectController.html#method_showGarbage"
+        },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003AshowMaterial\u0028\u0029",
+            "name": "showMaterial",
+            "summary": "Route\u0020for\u0020showing\u0020the\u0020material\u0020of\u0020the\u0020garbage.",
+            "url": "classes/App-Controller-ProjectController.html#method_showMaterial"
         },                {
             "fqsen": "\\App\\Controller\\Report",
             "name": "Report",
@@ -296,20 +396,10 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Controller-Report.html#method_number"
         },                {
-            "fqsen": "\\App\\Controller\\Report\u003A\u003Aapi\u0028\u0029",
-            "name": "api",
+            "fqsen": "\\App\\Controller\\Report\u003A\u003Ametrics\u0028\u0029",
+            "name": "metrics",
             "summary": "",
-            "url": "classes/App-Controller-Report.html#method_api"
-        },                {
-            "fqsen": "\\App\\Controller\\Report\u003A\u003AjsonQuote\u0028\u0029",
-            "name": "jsonQuote",
-            "summary": "",
-            "url": "classes/App-Controller-Report.html#method_jsonQuote"
-        },                {
-            "fqsen": "\\App\\Controller\\Report\u003A\u003AjsonGame\u0028\u0029",
-            "name": "jsonGame",
-            "summary": "",
-            "url": "classes/App-Controller-Report.html#method_jsonGame"
+            "url": "classes/App-Controller-Report.html#method_metrics"
         },                {
             "fqsen": "\\App\\Dice\\Dice",
             "name": "Dice",
@@ -318,22 +408,22 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Dice\\Dice\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "",
+            "summary": "Constructs\u0020a\u0020dice.",
             "url": "classes/App-Dice-Dice.html#method___construct"
         },                {
             "fqsen": "\\App\\Dice\\Dice\u003A\u003Aroll\u0028\u0029",
             "name": "roll",
-            "summary": "",
+            "summary": "Rolls\u0020the\u0020die\u0020and\u0020sets\u0020a\u0020random\u0020value.",
             "url": "classes/App-Dice-Dice.html#method_roll"
         },                {
             "fqsen": "\\App\\Dice\\Dice\u003A\u003AgetValue\u0028\u0029",
             "name": "getValue",
-            "summary": "",
+            "summary": "Returns\u0020the\u0020value\u0020of\u0020the\u0020die.",
             "url": "classes/App-Dice-Dice.html#method_getValue"
         },                {
             "fqsen": "\\App\\Dice\\Dice\u003A\u003AgetAsString\u0028\u0029",
             "name": "getAsString",
-            "summary": "",
+            "summary": "Return\u0020the\u0020die\u0020value\u0020as\u0020a\u0020string.",
             "url": "classes/App-Dice-Dice.html#method_getAsString"
         },                {
             "fqsen": "\\App\\Dice\\Dice\u003A\u003A\u0024value",
@@ -348,12 +438,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Dice\\DiceGraphic\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "",
+            "summary": "Creates\u0020a\u0020DiceGraphic\u0020object.",
             "url": "classes/App-Dice-DiceGraphic.html#method___construct"
         },                {
             "fqsen": "\\App\\Dice\\DiceGraphic\u003A\u003AgetAsString\u0028\u0029",
             "name": "getAsString",
-            "summary": "",
+            "summary": "Returns\u0020a\u0020string\u0020containing\u0020a\u0020UTF\u002D8\u0020icon.",
             "url": "classes/App-Dice-DiceGraphic.html#method_getAsString"
         },                {
             "fqsen": "\\App\\Dice\\DiceGraphic\u003A\u003A\u0024representation",
@@ -368,32 +458,32 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Dice\\DiceHand\u003A\u003Aadd\u0028\u0029",
             "name": "add",
-            "summary": "",
+            "summary": "Adds\u0020dice\u0020to\u0020the\u0020dice\u0020hand.",
             "url": "classes/App-Dice-DiceHand.html#method_add"
         },                {
             "fqsen": "\\App\\Dice\\DiceHand\u003A\u003Aroll\u0028\u0029",
             "name": "roll",
-            "summary": "",
+            "summary": "Rolls\u0020all\u0020the\u0020dice\u0020in\u0020the\u0020dice\u0020hand.",
             "url": "classes/App-Dice-DiceHand.html#method_roll"
         },                {
             "fqsen": "\\App\\Dice\\DiceHand\u003A\u003AgetNumberDices\u0028\u0029",
             "name": "getNumberDices",
-            "summary": "",
+            "summary": "Returns\u0020how\u0020many\u0020dice\u0020is\u0020in\u0020the\u0020hand.",
             "url": "classes/App-Dice-DiceHand.html#method_getNumberDices"
         },                {
             "fqsen": "\\App\\Dice\\DiceHand\u003A\u003AgetValues\u0028\u0029",
             "name": "getValues",
-            "summary": "",
+            "summary": "Returns\u0020all\u0020the\u0020values\u0020of\u0020the\u0020dice\u0020in\u0020the\u0020dice\u0020hand.",
             "url": "classes/App-Dice-DiceHand.html#method_getValues"
         },                {
             "fqsen": "\\App\\Dice\\DiceHand\u003A\u003Asum\u0028\u0029",
             "name": "sum",
-            "summary": "",
+            "summary": "Sums\u0020upp\u0020all\u0020the\u0020values\u0020of\u0020the\u0020dice\u0020in\u0020the\u0020dice\u0020hand.",
             "url": "classes/App-Dice-DiceHand.html#method_sum"
         },                {
             "fqsen": "\\App\\Dice\\DiceHand\u003A\u003AgetString\u0028\u0029",
             "name": "getString",
-            "summary": "",
+            "summary": "Return\u0020all\u0020the\u0020dice\u0020as\u0020strings\u0020in\u0020an\u0020array.",
             "url": "classes/App-Dice-DiceHand.html#method_getString"
         },                {
             "fqsen": "\\App\\Dice\\DiceHand\u003A\u003A\u0024hand",
@@ -401,10 +491,340 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Dice-DiceHand.html#property_hand"
         },                {
+            "fqsen": "\\App\\Entity\\Book",
+            "name": "Book",
+            "summary": "",
+            "url": "classes/App-Entity-Book.html"
+        },                {
+            "fqsen": "\\App\\Entity\\Book\u003A\u003AgetId\u0028\u0029",
+            "name": "getId",
+            "summary": "",
+            "url": "classes/App-Entity-Book.html#method_getId"
+        },                {
+            "fqsen": "\\App\\Entity\\Book\u003A\u003AgetName\u0028\u0029",
+            "name": "getName",
+            "summary": "",
+            "url": "classes/App-Entity-Book.html#method_getName"
+        },                {
+            "fqsen": "\\App\\Entity\\Book\u003A\u003AsetName\u0028\u0029",
+            "name": "setName",
+            "summary": "",
+            "url": "classes/App-Entity-Book.html#method_setName"
+        },                {
+            "fqsen": "\\App\\Entity\\Book\u003A\u003AgetISBN\u0028\u0029",
+            "name": "getISBN",
+            "summary": "",
+            "url": "classes/App-Entity-Book.html#method_getISBN"
+        },                {
+            "fqsen": "\\App\\Entity\\Book\u003A\u003AsetISBN\u0028\u0029",
+            "name": "setISBN",
+            "summary": "",
+            "url": "classes/App-Entity-Book.html#method_setISBN"
+        },                {
+            "fqsen": "\\App\\Entity\\Book\u003A\u003AgetAuthor\u0028\u0029",
+            "name": "getAuthor",
+            "summary": "",
+            "url": "classes/App-Entity-Book.html#method_getAuthor"
+        },                {
+            "fqsen": "\\App\\Entity\\Book\u003A\u003AsetAuthor\u0028\u0029",
+            "name": "setAuthor",
+            "summary": "",
+            "url": "classes/App-Entity-Book.html#method_setAuthor"
+        },                {
+            "fqsen": "\\App\\Entity\\Book\u003A\u003AgetImage\u0028\u0029",
+            "name": "getImage",
+            "summary": "",
+            "url": "classes/App-Entity-Book.html#method_getImage"
+        },                {
+            "fqsen": "\\App\\Entity\\Book\u003A\u003AsetImage\u0028\u0029",
+            "name": "setImage",
+            "summary": "",
+            "url": "classes/App-Entity-Book.html#method_setImage"
+        },                {
+            "fqsen": "\\App\\Entity\\Book\u003A\u003A\u0024id",
+            "name": "id",
+            "summary": "",
+            "url": "classes/App-Entity-Book.html#property_id"
+        },                {
+            "fqsen": "\\App\\Entity\\Book\u003A\u003A\u0024name",
+            "name": "name",
+            "summary": "",
+            "url": "classes/App-Entity-Book.html#property_name"
+        },                {
+            "fqsen": "\\App\\Entity\\Book\u003A\u003A\u0024ISBN",
+            "name": "ISBN",
+            "summary": "",
+            "url": "classes/App-Entity-Book.html#property_ISBN"
+        },                {
+            "fqsen": "\\App\\Entity\\Book\u003A\u003A\u0024author",
+            "name": "author",
+            "summary": "",
+            "url": "classes/App-Entity-Book.html#property_author"
+        },                {
+            "fqsen": "\\App\\Entity\\Book\u003A\u003A\u0024image",
+            "name": "image",
+            "summary": "",
+            "url": "classes/App-Entity-Book.html#property_image"
+        },                {
+            "fqsen": "\\App\\Entity\\GarbageBeachKattegattOstersjon",
+            "name": "GarbageBeachKattegattOstersjon",
+            "summary": "",
+            "url": "classes/App-Entity-GarbageBeachKattegattOstersjon.html"
+        },                {
+            "fqsen": "\\App\\Entity\\GarbageBeachKattegattOstersjon\u003A\u003AgetId\u0028\u0029",
+            "name": "getId",
+            "summary": "",
+            "url": "classes/App-Entity-GarbageBeachKattegattOstersjon.html#method_getId"
+        },                {
+            "fqsen": "\\App\\Entity\\GarbageBeachKattegattOstersjon\u003A\u003AgetYear\u0028\u0029",
+            "name": "getYear",
+            "summary": "",
+            "url": "classes/App-Entity-GarbageBeachKattegattOstersjon.html#method_getYear"
+        },                {
+            "fqsen": "\\App\\Entity\\GarbageBeachKattegattOstersjon\u003A\u003AsetYear\u0028\u0029",
+            "name": "setYear",
+            "summary": "",
+            "url": "classes/App-Entity-GarbageBeachKattegattOstersjon.html#method_setYear"
+        },                {
+            "fqsen": "\\App\\Entity\\GarbageBeachKattegattOstersjon\u003A\u003AgetUrbanBeach\u0028\u0029",
+            "name": "getUrbanBeach",
+            "summary": "",
+            "url": "classes/App-Entity-GarbageBeachKattegattOstersjon.html#method_getUrbanBeach"
+        },                {
+            "fqsen": "\\App\\Entity\\GarbageBeachKattegattOstersjon\u003A\u003AsetUrbanBeach\u0028\u0029",
+            "name": "setUrbanBeach",
+            "summary": "",
+            "url": "classes/App-Entity-GarbageBeachKattegattOstersjon.html#method_setUrbanBeach"
+        },                {
+            "fqsen": "\\App\\Entity\\GarbageBeachKattegattOstersjon\u003A\u003AgetRuralBeach\u0028\u0029",
+            "name": "getRuralBeach",
+            "summary": "",
+            "url": "classes/App-Entity-GarbageBeachKattegattOstersjon.html#method_getRuralBeach"
+        },                {
+            "fqsen": "\\App\\Entity\\GarbageBeachKattegattOstersjon\u003A\u003AsetRuralBeach\u0028\u0029",
+            "name": "setRuralBeach",
+            "summary": "",
+            "url": "classes/App-Entity-GarbageBeachKattegattOstersjon.html#method_setRuralBeach"
+        },                {
+            "fqsen": "\\App\\Entity\\GarbageBeachKattegattOstersjon\u003A\u003A\u0024id",
+            "name": "id",
+            "summary": "",
+            "url": "classes/App-Entity-GarbageBeachKattegattOstersjon.html#property_id"
+        },                {
+            "fqsen": "\\App\\Entity\\GarbageBeachKattegattOstersjon\u003A\u003A\u0024year",
+            "name": "year",
+            "summary": "",
+            "url": "classes/App-Entity-GarbageBeachKattegattOstersjon.html#property_year"
+        },                {
+            "fqsen": "\\App\\Entity\\GarbageBeachKattegattOstersjon\u003A\u003A\u0024urbanBeach",
+            "name": "urbanBeach",
+            "summary": "",
+            "url": "classes/App-Entity-GarbageBeachKattegattOstersjon.html#property_urbanBeach"
+        },                {
+            "fqsen": "\\App\\Entity\\GarbageBeachKattegattOstersjon\u003A\u003A\u0024ruralBeach",
+            "name": "ruralBeach",
+            "summary": "",
+            "url": "classes/App-Entity-GarbageBeachKattegattOstersjon.html#property_ruralBeach"
+        },                {
+            "fqsen": "\\App\\Entity\\GarbageMaterialKattegattOstersjon",
+            "name": "GarbageMaterialKattegattOstersjon",
+            "summary": "",
+            "url": "classes/App-Entity-GarbageMaterialKattegattOstersjon.html"
+        },                {
+            "fqsen": "\\App\\Entity\\GarbageMaterialKattegattOstersjon\u003A\u003AgetId\u0028\u0029",
+            "name": "getId",
+            "summary": "",
+            "url": "classes/App-Entity-GarbageMaterialKattegattOstersjon.html#method_getId"
+        },                {
+            "fqsen": "\\App\\Entity\\GarbageMaterialKattegattOstersjon\u003A\u003AgetMaterial\u0028\u0029",
+            "name": "getMaterial",
+            "summary": "",
+            "url": "classes/App-Entity-GarbageMaterialKattegattOstersjon.html#method_getMaterial"
+        },                {
+            "fqsen": "\\App\\Entity\\GarbageMaterialKattegattOstersjon\u003A\u003AsetMaterial\u0028\u0029",
+            "name": "setMaterial",
+            "summary": "",
+            "url": "classes/App-Entity-GarbageMaterialKattegattOstersjon.html#method_setMaterial"
+        },                {
+            "fqsen": "\\App\\Entity\\GarbageMaterialKattegattOstersjon\u003A\u003AgetPercentage\u0028\u0029",
+            "name": "getPercentage",
+            "summary": "",
+            "url": "classes/App-Entity-GarbageMaterialKattegattOstersjon.html#method_getPercentage"
+        },                {
+            "fqsen": "\\App\\Entity\\GarbageMaterialKattegattOstersjon\u003A\u003AsetPercentage\u0028\u0029",
+            "name": "setPercentage",
+            "summary": "",
+            "url": "classes/App-Entity-GarbageMaterialKattegattOstersjon.html#method_setPercentage"
+        },                {
+            "fqsen": "\\App\\Entity\\GarbageMaterialKattegattOstersjon\u003A\u003A\u0024id",
+            "name": "id",
+            "summary": "",
+            "url": "classes/App-Entity-GarbageMaterialKattegattOstersjon.html#property_id"
+        },                {
+            "fqsen": "\\App\\Entity\\GarbageMaterialKattegattOstersjon\u003A\u003A\u0024material",
+            "name": "material",
+            "summary": "",
+            "url": "classes/App-Entity-GarbageMaterialKattegattOstersjon.html#property_material"
+        },                {
+            "fqsen": "\\App\\Entity\\GarbageMaterialKattegattOstersjon\u003A\u003A\u0024percentage",
+            "name": "percentage",
+            "summary": "",
+            "url": "classes/App-Entity-GarbageMaterialKattegattOstersjon.html#property_percentage"
+        },                {
+            "fqsen": "\\App\\Entity\\GarbageMaterialRuralKattegattOstersjon",
+            "name": "GarbageMaterialRuralKattegattOstersjon",
+            "summary": "",
+            "url": "classes/App-Entity-GarbageMaterialRuralKattegattOstersjon.html"
+        },                {
+            "fqsen": "\\App\\Entity\\GarbageMaterialRuralKattegattOstersjon\u003A\u003AgetId\u0028\u0029",
+            "name": "getId",
+            "summary": "",
+            "url": "classes/App-Entity-GarbageMaterialRuralKattegattOstersjon.html#method_getId"
+        },                {
+            "fqsen": "\\App\\Entity\\GarbageMaterialRuralKattegattOstersjon\u003A\u003AgetMaterial\u0028\u0029",
+            "name": "getMaterial",
+            "summary": "",
+            "url": "classes/App-Entity-GarbageMaterialRuralKattegattOstersjon.html#method_getMaterial"
+        },                {
+            "fqsen": "\\App\\Entity\\GarbageMaterialRuralKattegattOstersjon\u003A\u003AsetMaterial\u0028\u0029",
+            "name": "setMaterial",
+            "summary": "",
+            "url": "classes/App-Entity-GarbageMaterialRuralKattegattOstersjon.html#method_setMaterial"
+        },                {
+            "fqsen": "\\App\\Entity\\GarbageMaterialRuralKattegattOstersjon\u003A\u003AgetPercentage\u0028\u0029",
+            "name": "getPercentage",
+            "summary": "",
+            "url": "classes/App-Entity-GarbageMaterialRuralKattegattOstersjon.html#method_getPercentage"
+        },                {
+            "fqsen": "\\App\\Entity\\GarbageMaterialRuralKattegattOstersjon\u003A\u003AsetPercentage\u0028\u0029",
+            "name": "setPercentage",
+            "summary": "",
+            "url": "classes/App-Entity-GarbageMaterialRuralKattegattOstersjon.html#method_setPercentage"
+        },                {
+            "fqsen": "\\App\\Entity\\GarbageMaterialRuralKattegattOstersjon\u003A\u003A\u0024id",
+            "name": "id",
+            "summary": "",
+            "url": "classes/App-Entity-GarbageMaterialRuralKattegattOstersjon.html#property_id"
+        },                {
+            "fqsen": "\\App\\Entity\\GarbageMaterialRuralKattegattOstersjon\u003A\u003A\u0024material",
+            "name": "material",
+            "summary": "",
+            "url": "classes/App-Entity-GarbageMaterialRuralKattegattOstersjon.html#property_material"
+        },                {
+            "fqsen": "\\App\\Entity\\GarbageMaterialRuralKattegattOstersjon\u003A\u003A\u0024percentage",
+            "name": "percentage",
+            "summary": "",
+            "url": "classes/App-Entity-GarbageMaterialRuralKattegattOstersjon.html#property_percentage"
+        },                {
+            "fqsen": "\\App\\Form\\BeachGarbageFormType",
+            "name": "BeachGarbageFormType",
+            "summary": "",
+            "url": "classes/App-Form-BeachGarbageFormType.html"
+        },                {
+            "fqsen": "\\App\\Form\\BeachGarbageFormType\u003A\u003AbuildForm\u0028\u0029",
+            "name": "buildForm",
+            "summary": "",
+            "url": "classes/App-Form-BeachGarbageFormType.html#method_buildForm"
+        },                {
+            "fqsen": "\\App\\Form\\BeachGarbageFormType\u003A\u003AconfigureOptions\u0028\u0029",
+            "name": "configureOptions",
+            "summary": "",
+            "url": "classes/App-Form-BeachGarbageFormType.html#method_configureOptions"
+        },                {
+            "fqsen": "\\App\\Form\\BookFormType",
+            "name": "BookFormType",
+            "summary": "",
+            "url": "classes/App-Form-BookFormType.html"
+        },                {
+            "fqsen": "\\App\\Form\\BookFormType\u003A\u003AbuildForm\u0028\u0029",
+            "name": "buildForm",
+            "summary": "Builds\u0020the\u0020form\u0020with\u0020the\u0020specified\u0020fields.",
+            "url": "classes/App-Form-BookFormType.html#method_buildForm"
+        },                {
+            "fqsen": "\\App\\Form\\BookFormType\u003A\u003AconfigureOptions\u0028\u0029",
+            "name": "configureOptions",
+            "summary": "Sets\u0020the\u0020book\u0020type.",
+            "url": "classes/App-Form-BookFormType.html#method_configureOptions"
+        },                {
+            "fqsen": "\\App\\Form\\GarbageMaterialFormType",
+            "name": "GarbageMaterialFormType",
+            "summary": "",
+            "url": "classes/App-Form-GarbageMaterialFormType.html"
+        },                {
+            "fqsen": "\\App\\Form\\GarbageMaterialFormType\u003A\u003AbuildForm\u0028\u0029",
+            "name": "buildForm",
+            "summary": "",
+            "url": "classes/App-Form-GarbageMaterialFormType.html#method_buildForm"
+        },                {
+            "fqsen": "\\App\\Form\\GarbageMaterialFormType\u003A\u003AconfigureOptions\u0028\u0029",
+            "name": "configureOptions",
+            "summary": "",
+            "url": "classes/App-Form-GarbageMaterialFormType.html#method_configureOptions"
+        },                {
+            "fqsen": "\\App\\Form\\GarbageMaterialRuralFormType",
+            "name": "GarbageMaterialRuralFormType",
+            "summary": "",
+            "url": "classes/App-Form-GarbageMaterialRuralFormType.html"
+        },                {
+            "fqsen": "\\App\\Form\\GarbageMaterialRuralFormType\u003A\u003AbuildForm\u0028\u0029",
+            "name": "buildForm",
+            "summary": "",
+            "url": "classes/App-Form-GarbageMaterialRuralFormType.html#method_buildForm"
+        },                {
+            "fqsen": "\\App\\Form\\GarbageMaterialRuralFormType\u003A\u003AconfigureOptions\u0028\u0029",
+            "name": "configureOptions",
+            "summary": "",
+            "url": "classes/App-Form-GarbageMaterialRuralFormType.html#method_configureOptions"
+        },                {
             "fqsen": "\\App\\Kernel",
             "name": "Kernel",
             "summary": "",
             "url": "classes/App-Kernel.html"
+        },                {
+            "fqsen": "\\App\\Repository\\BookRepository",
+            "name": "BookRepository",
+            "summary": "",
+            "url": "classes/App-Repository-BookRepository.html"
+        },                {
+            "fqsen": "\\App\\Repository\\BookRepository\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/App-Repository-BookRepository.html#method___construct"
+        },                {
+            "fqsen": "\\App\\Repository\\BookRepository\u003A\u003AfindOneByISBNField\u0028\u0029",
+            "name": "findOneByISBNField",
+            "summary": "",
+            "url": "classes/App-Repository-BookRepository.html#method_findOneByISBNField"
+        },                {
+            "fqsen": "\\App\\Repository\\GarbageBeachKattegattOstersjonRepository",
+            "name": "GarbageBeachKattegattOstersjonRepository",
+            "summary": "",
+            "url": "classes/App-Repository-GarbageBeachKattegattOstersjonRepository.html"
+        },                {
+            "fqsen": "\\App\\Repository\\GarbageBeachKattegattOstersjonRepository\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/App-Repository-GarbageBeachKattegattOstersjonRepository.html#method___construct"
+        },                {
+            "fqsen": "\\App\\Repository\\GarbageMaterialKattegattOstersjonRepository",
+            "name": "GarbageMaterialKattegattOstersjonRepository",
+            "summary": "",
+            "url": "classes/App-Repository-GarbageMaterialKattegattOstersjonRepository.html"
+        },                {
+            "fqsen": "\\App\\Repository\\GarbageMaterialKattegattOstersjonRepository\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/App-Repository-GarbageMaterialKattegattOstersjonRepository.html#method___construct"
+        },                {
+            "fqsen": "\\App\\Repository\\GarbageMaterialRuralKattegattOstersjonRepository",
+            "name": "GarbageMaterialRuralKattegattOstersjonRepository",
+            "summary": "",
+            "url": "classes/App-Repository-GarbageMaterialRuralKattegattOstersjonRepository.html"
+        },                {
+            "fqsen": "\\App\\Repository\\GarbageMaterialRuralKattegattOstersjonRepository\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/App-Repository-GarbageMaterialRuralKattegattOstersjonRepository.html#method___construct"
         },                {
             "fqsen": "\\",
             "name": "\\",
@@ -426,9 +846,24 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/app-dice.html"
         },                {
+            "fqsen": "\\App\\Entity",
+            "name": "Entity",
+            "summary": "",
+            "url": "namespaces/app-entity.html"
+        },                {
+            "fqsen": "\\App\\Form",
+            "name": "Form",
+            "summary": "",
+            "url": "namespaces/app-form.html"
+        },                {
             "fqsen": "\\App",
             "name": "App",
             "summary": "",
             "url": "namespaces/app.html"
+        },                {
+            "fqsen": "\\App\\Repository",
+            "name": "Repository",
+            "summary": "",
+            "url": "namespaces/app-repository.html"
         }            ]
 );

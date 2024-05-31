@@ -1,4 +1,7 @@
 <?php
+/**
+ * The controller of the project-part of the website.
+ */
 
 namespace App\Controller;
 
@@ -29,16 +32,16 @@ class ProjectController extends AbstractController
     {
         return $this->render('project/start-project.html.twig');
     }
-/**
- * Route that show information about the project.
- */
+    /**
+     * Route that show information about the project.
+     */
     #[Route("/proj/about", name: "project_about")]
     public function aboutProject(): Response
     {
         return $this->render('project/about.html.twig');
     }
 
-        /**
+    /**
      * Route for adding info to the database.
      */
     #[Route('/proj/add', name: 'project_add')]
@@ -73,75 +76,74 @@ class ProjectController extends AbstractController
      * Route for showing garbage of beach.
      */
 
-     #[Route('/proj/show/garbage', name: 'project_show_garbage')]
-     public function showGarbage(
+    #[Route('/proj/show/garbage', name: 'project_show_garbage')]
+    public function showGarbage(
         GarbageBeachKattegattOstersjonRepository $garbageRepository,
-
-     ): Response {
-         $years = $garbageRepository
-             ->findAll();
+    ): Response {
+        $years = $garbageRepository
+            ->findAll();
 
         $labels = [];
         $datasets1 = [];
         $datasets2 = [];
 
-        foreach($years as $data){
+        foreach($years as $data) {
             $labels[] = $data->getyear();
             $datasets1[] = $data->getUrbanBeach();
             $datasets2[] = $data->getRuralBeach();
         }
 
-         return $this->render('project/show_garbage.html.twig', [
-             'years' => $years,
-             'labels' => $labels,
-             'datasets1' => $datasets1,
-             'datasets2' => $datasets2,
+        return $this->render('project/show_garbage.html.twig', [
+            'years' => $years,
+            'labels' => $labels,
+            'datasets1' => $datasets1,
+            'datasets2' => $datasets2,
 
-         ]);
-     }
+        ]);
+    }
     /**
      * Route for showing the material of the garbage.
      */
 
-     #[Route('/proj/show/material', name: 'project_show_material')]
-     public function showMaterial(
+    #[Route('/proj/show/material', name: 'project_show_material')]
+    public function showMaterial(
         GarbageMaterialKattegattOstersjonRepository $materialRepository,
         GarbageMaterialRuralKattegattOstersjonRepository $materialRuralRepository
-     ): Response {
+    ): Response {
 
 
         $materials = $materialRepository
         ->findAll();
-        
+
         $materialsRural = $materialRuralRepository
         ->findAll();
 
         $labelsUrban = [];
         $datasetsUrban = [];
 
-        foreach($materials as $data){
+        foreach($materials as $data) {
             $labelsUrban[] = $data->getMaterial();
             $datasetsUrban[] = $data->getPercentage();
-            
+
         }
 
         $labelsRural = [];
         $datasetsRural = [];
 
-        foreach($materialsRural as $data){
+        foreach($materialsRural as $data) {
             $labelsRural[] = $data->getMaterial();
             $datasetsRural[] = $data->getPercentage();
-            
+
         }
 
- 
-         return $this->render('project/show_material.html.twig', [
-             'materials' => $materials,
-             'materialsRural' => $materialsRural,
-             'labelsUrban' => $labelsUrban,
-             'datasetsUrban' => $datasetsUrban,
-             'labelsRural' => $labelsRural,
-             'datasetsRural' => $datasetsRural
-         ]);
-     }
+
+        return $this->render('project/show_material.html.twig', [
+            'materials' => $materials,
+            'materialsRural' => $materialsRural,
+            'labelsUrban' => $labelsUrban,
+            'datasetsUrban' => $datasetsUrban,
+            'labelsRural' => $labelsRural,
+            'datasetsRural' => $datasetsRural
+        ]);
+    }
 }

@@ -11,6 +11,9 @@ use Doctrine\Persistence\ObjectRepository;
  */
 class GarbageMaterialKattegattOstersjonTest extends TestCase
 {
+    /**
+     * Tests the creation of the object.
+     */
     public function testGarbageMaterialKattegattOstersjon()
     {
         $material = new GarbageMaterialKattegattOstersjon();
@@ -32,6 +35,9 @@ class GarbageMaterialKattegattOstersjonTest extends TestCase
         $this->assertEquals(72, $material->getPercentage());
 
     }
+    /**
+    * Tests the getId function in the class.
+    */
 
     public function testGarbageMaterialKattegattOstersjonGetId()
     {

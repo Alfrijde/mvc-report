@@ -1,92 +1,88 @@
 {% extends "base-project.html.twig" %}
 
-{% block title %}Skräp i havet{% endblock %}
+{% block title %}Skräpets material{% endblock %}
 
 {% block body %}
 <div class="main">
+  <h2>Fördeling av material i skräp</h2>
+  <p>I dessa diagram vissas fördelning av skräpets material som hittas på stränder. Diagrammen avser 
+    stränder kring Östersjön och Kattegatt som listas på <span class="quote">Marint skräp på stränder</span>. 
+    Den marina nedskräpningen beror främst på globalt bristande avfallshantering på land.
+    Man kan tydligt se att det mesta skräpet består av plats, plastproduktion och konsumtion är den främsta 
+    orsaken till marin nedskräpning.
+ </p>
+ <p>Det är övervägande plast på båda typerna av stränder. Plast är lätt, flyter bra och bryts inte heller ned, 
+  det betyder att plasten kan färdas långt och finnas kvar länge i naturen. På de stadsnära stränderna är det 
+  näst vanliga materialet trä, vilket jag tycker är intressant. Kan det vara lastpallar och liknande material 
+  som flyter i land i närheten av städer?</p>
 
 
-{# <table>
-    <tr>
-        <td>År</td>
-        <td>Urbana stränder</td>
-        <td>Rurala stränder</td>
-    </tr>
-{% for year in years %}
-<tr>
-<td>{{ year.year }}</td>
-<td>{{ year.urbanBeach }}</td>
-<td>{{ year.ruralBeach }}</td>
-</tr>
-{% endfor %}
-</table> #}
-
-
-{# <table>
-    <tr>
-        <td>Material</td>
-        <td>Procent</td>
-
-    </tr>
-{% for material in materials %}
-<tr>
-<td>{{ material.material }}</td>
-<td>{{ material.percentage }}</td>
-
-</tr>
-{% endfor %}
-</table> #}
-
-
-{# <table>
-    <tr>
-        <td>Material</td>
-        <td>Procent</td>
-
-    </tr>
-{% for material in materialsRural %}
-<tr>
-<td>{{ material.material }}</td>
-<td>{{ material.percentage }}</td>
-
-</tr>
-{% endfor %}
-</table> #}
-  <p>Fördeling av material på urbana stränder 2023</p>
+  <h3>Fördeling av material på urbana stränder 2023</h3>
   <div>
     <canvas id="UrbanMatrialChart"></canvas>
   </div>
-  <p>Fördeling av material på rurala stränder 2023</p>
+  <h3>Fördeling av material på rurala stränder 2023</h3>
   <div>
     <canvas id="RuralMatrialChart"></canvas>
   </div>
 
-  <p>Statestik från Håll Sverige rent via Sveriges miljömål.</p>
+  <p><span class="img-text">Statistik från Håll Sverige rent via Sveriges miljömål. Källa Sveriges miljömål.</span></p>
 
-  
-  <script>
+</div>
 
-    var urbanMaterial = document.getElementById("UrbanMatrialChart").getContext("2d");
+<script>
+
+  var urbanMaterial = document.getElementById("UrbanMatrialChart").getContext("2d");
+  urbanMaterial.height = 600;
+
+  new Chart(urbanMaterial, {
+      type: 'pie',
+      data: {
+              labels: JSON.parse('{{ labelsUrban |json_encode|e("js") }}'),
+              datasets: [{
+                label: 'Procent',
+                data: JSON.parse('{{ datasetsUrban |json_encode|e("js") }}'),
+                backgroundColor: [
+                  '#024959',
+                  '#011F26',
+                  '#026873',
+                  '#F2C185',
+                  '#BFAE99',
+                  '#027B73',
+                  '#F2EAD0',
+                  '#A6A59F',
+                  '#012E40',
+                  '#91B8B3'
+                ],
+                hoverOffset: 4
+              }]
+      },
+      options: {
+          aspectRatio: 2
+      }
+    });
+
+    var RuralMaterial = document.getElementById("RuralMatrialChart").getContext("2d");
     urbanMaterial.height = 600;
 
-    new Chart(urbanMaterial, {
+    new Chart(RuralMaterial, {
         type: 'pie',
         data: {
-                labels: JSON.parse('{{ labelsUrban |json_encode|e("js") }}'),
+                labels: JSON.parse('{{ labelsRural |json_encode|e("js") }}'),
                 datasets: [{
                   label: 'Procent',
-                  data: JSON.parse('{{ datasetsUrban |json_encode|e("js") }}'),
+                  data: JSON.parse('{{ datasetsRural |json_encode|e("js") }}'),
                   backgroundColor: [
-                    '#024959',
-                    '#011F26',
-                    '#026873',
-                    '#F2C185',
-                    '#BFAE99',
-                    '#027B73',
-                    '#F2EAD0',
-                    '#A6A59F',
-                    '#012E40',
-                    '#91B8B3'
+                      '#024959',
+                      '#011F26',
+                      '#026873',
+                      '#F2C185',
+                      '#BFAE99',
+                      '#027B73',
+                      '#F2EAD0',
+                      '#A6A59F',
+                      '#012E40',
+                      '#91B8B3'
                   ],
                   hoverOffset: 4
                 }]
@@ -96,39 +92,5 @@
         }
       });
 
-      var RuralMaterial = document.getElementById("RuralMatrialChart").getContext("2d");
-      urbanMaterial.height = 600;
-  
-      new Chart(RuralMaterial, {
-          type: 'pie',
-          data: {
-                  labels: JSON.parse('{{ labelsRural |json_encode|e("js") }}'),
-                  datasets: [{
-                    label: 'Procent',
-                    data: JSON.parse('{{ datasetsRural |json_encode|e("js") }}'),
-                    backgroundColor: [
-                        '#024959',
-                        '#011F26',
-                        '#026873',
-                        '#F2C185',
-                        '#BFAE99',
-                        '#027B73',
-                        '#F2EAD0',
-                        '#A6A59F',
-                        '#012E40',
-                        '#91B8B3'
-                    ],
-                    hoverOffset: 4
-                  }]
-          },
-          options: {
-              aspectRatio: 2
-          }
-        });
-
-  </script>
-
-
-</div>
-</div>
+</script>
 {% endblock %}
